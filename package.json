@@ -1,8 +1,48 @@
 {
   "name": "re-geo",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "geo cities"
+  ],
+  "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "styled-components": "^4.1.3"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "eslint --fix './src/**/*.ts'",
+    "format": "prettier --write './src/**/*.ts'",
+    "build:local": "BUILD_MODE='development' REACT_APP_ENV=local webpack",
+    "build:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack",
+    "build:stg": "BUILD_MODE='production' REACT_APP_ENV=staging webpack",
+    "build:prd": "BUILD_MODE='production' REACT_APP_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@storybook/react": "^4.1.11",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "@types/styled-components": "^4.1.10",
+    "@typescript-eslint/eslint-plugin": "^1.3.0",
+    "@typescript-eslint/parser": "^1.3.0",
+    "@typescript-eslint/typescript-estree": "^1.3.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "prettier": "^1.16.4",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
 }
