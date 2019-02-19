@@ -9,8 +9,13 @@ const css = {
   background: `#000 url(${Rainbow}) top left`
 };
 
-const StyledButton = () => {
-  return <Button style={css}>aaaaaaaaaaa</Button>;
+interface Props {
+  children: React.ReactNode;
+}
+
+const StyledButton = (props: Props) => {
+  const { children } = props;
+  return <Button style={css}>{children}</Button>;
 };
 
 export default StyledButton;

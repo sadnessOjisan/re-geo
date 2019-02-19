@@ -9,7 +9,11 @@ const css = {
   background: `#000 url(${Stars}) top left`
 };
 
-const StyledNavbar = props => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const StyledNavbar = (props: Props) => {
   const { children } = props;
   return <Navbar style={css}>{children}</Navbar>;
 };
