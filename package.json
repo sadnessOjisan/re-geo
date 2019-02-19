@@ -1,6 +1,6 @@
 {
   "name": "re-geo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
@@ -46,6 +46,7 @@
     "prettier": "^1.16.4",
     "style-loader": "^0.23.1",
     "typescript": "^3.3.3",
+    "url-loader": "^1.1.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
   }
