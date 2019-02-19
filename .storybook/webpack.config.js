@@ -9,6 +9,10 @@ module.exports = (baseConfig, env) => {
     test: /\.css/,
     use: ["style-loader", { loader: "css-loader", options: { url: false } }]
   });
+  baseConfig.module.rules.push({
+    test: /\.(png|jpg|gif)$/,
+    loader: "file-loader"
+  });
   baseConfig.resolve.extensions.push(".ts", ".tsx");
 
   return baseConfig;
