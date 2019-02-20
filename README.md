@@ -1,8 +1,28 @@
 # re-geo
 
-re: geocities component
+react based geocities component.
 
-## how to use
+This is inspired by [geo-bootstrap](https://github.com/divshot/geo-bootstrap). Thanks.
+
+## Usage
+
+to install
+
+```
+$ npm i -S re-geo
+```
+
+to use
+
+```js
+import Button from "re-geo";
+
+const GeoButton = () => {
+  return <Button>geo cities!!</Button>;
+};
+```
+
+## Customization
 
 This app has no html.
 For debug, should use storybook.
