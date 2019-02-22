@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 interface Props {
   children: React.ReactNode;
+  className: string;
 }
 
 const H2 = (props: Props) => {
-  const { children } = props;
-  return <StyledH2>{children}</StyledH2>;
+  const { children, className } = props;
+  return <StyledH2 className={className}>{children}</StyledH2>;
 };
 
 const StyledH2 = styled.h2`
