@@ -13,7 +13,14 @@ module.exports = (baseConfig, env) => {
     test: /\.(png|jpg|gif)$/,
     loader: "file-loader"
   });
-  baseConfig.resolve.extensions.push(".ts", ".tsx");
+  baseConfig.resolve.extensions.push(
+    ".ts",
+    ".tsx",
+    ".gif",
+    ".css",
+    "jpg",
+    "png"
+  );
 
   return baseConfig;
 };
