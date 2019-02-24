@@ -31,8 +31,7 @@ const Link = styled.a`
   border: 1px solid #ddd;
   border-radius: 15px;
   text-decoration: underline;
-  color: #0ee;
-  color: ${props => (props.type === "disabled" ? "#999" : "#0ee")};
+  color: ${props => (props.type === "disabled" ? "#999" : "#0ee")} !important;
   font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
     "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
     sans-serif;
