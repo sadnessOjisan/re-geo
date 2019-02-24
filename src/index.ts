@@ -15,6 +15,10 @@ import H3 from "./components/text/H3";
 import H4 from "./components/text/H4";
 import H5 from "./components/text/H5";
 import H6 from "./components/text/H6";
+import Badge from "./components/misc/Badge";
+import Pager from "./components/misc/Pager";
+import ProgressBar from "./components/misc/ProgressBar";
+import Tabs from "./components/misc/Tabs";
 
 export {
   Button,
@@ -29,5 +33,9 @@ export {
   H3,
   H4,
   H5,
-  H6
+  H6,
+  Badge,
+  Pager,
+  ProgressBar,
+  Tabs
 };
