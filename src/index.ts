@@ -19,6 +19,7 @@ import Badge from "./components/misc/Badge";
 import Pager from "./components/misc/Pager";
 import ProgressBar from "./components/misc/ProgressBar";
 import Tabs from "./components/misc/Tabs";
+import Image from "./img";
 
 export {
   Button,
@@ -37,5 +38,6 @@ export {
   Badge,
   Pager,
   ProgressBar,
-  Tabs
+  Tabs,
+  Image
 };
