@@ -35,7 +35,7 @@ const Alerts = (props: Props) => {
 
 const StyledAlerts = styled.div`
   width: 100%;
-  color: ${props => {
+  color: ${(props: Props) => {
     switch (props.type) {
       case "alert":
         return "#000";
@@ -47,7 +47,7 @@ const StyledAlerts = styled.div`
         return "#000";
     }
   }};
-  background-color: ${props => {
+  background-color: ${(props: Props) => {
     switch (props.type) {
       case "alert":
         return "#ff0";
@@ -59,7 +59,7 @@ const StyledAlerts = styled.div`
         return "#0ff";
     }
   }};
-  border: ${props => {
+  border: ${(props: Props) => {
     switch (props.type) {
       case "alert":
         return "1px solid #f00";

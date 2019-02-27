@@ -2,9 +2,9 @@ import * as React from "react";
 import styled from "styled-components";
 
 interface Props {
-  type: "disabled" | null;
+  type?: "disabled";
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const ProgressBar = (props: Props) => {
