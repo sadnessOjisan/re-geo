@@ -36,6 +36,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".tsx", ".css", ".gif", "jpg", "png"]
+    extensions: [".js", ".ts", ".tsx", ".css", ".gif", "jpg", "png"]
   }
 };
