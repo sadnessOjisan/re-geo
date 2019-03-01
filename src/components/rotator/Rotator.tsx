@@ -1,7 +1,13 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const Rotator = props => {
+interface Props {
+  className?: string;
+  children: React.ReactNode;
+  speed?: number;
+}
+
+const Rotator = (props: Props) => {
   const { className, children, speed } = props;
   return (
     <Wrapper className={className} speed={speed}>

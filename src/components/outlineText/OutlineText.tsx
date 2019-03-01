@@ -1,7 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const OutlineText = props => {
+interface Props {
+  className?: string;
+  children: React.ReactNode;
+  size: number;
+  inlineColor: string;
+  outlineColor: string;
+  strokeWidth: string;
+}
+
+const OutlineText = (props: Props) => {
   const {
     className,
     children,
