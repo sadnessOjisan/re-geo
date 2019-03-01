@@ -1,12 +1,15 @@
 {
   "name": "re-geo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
   "keywords": [
     "geo cities"
+  ],
+  "files": [
+    "dist"
   ],
   "dependencies": {
     "bootstrap": "^4.3.1",
