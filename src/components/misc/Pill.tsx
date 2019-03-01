@@ -5,7 +5,7 @@ interface Props {
   isActive?: boolean;
   isDisable?: boolean;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const Pill = (props: Props) => {

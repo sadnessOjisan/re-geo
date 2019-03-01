@@ -29,14 +29,14 @@ const StyledBadge = styled.span`
   font-size: 13.536px;
   font-weight: bold;
   line-height: 14px;
-  color:${(props: Props) => {
+  color: ${(props: Props) => {
     switch (props.type) {
       case "warning":
         return "black";
       default:
         return "#fff";
     }
-  }}
+  }};
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   white-space: nowrap;
   vertical-align: baseline;
