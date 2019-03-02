@@ -20,6 +20,15 @@ import Pager from "./components/misc/Pager";
 import ProgressBar from "./components/misc/ProgressBar";
 import Tabs from "./components/misc/Tabs";
 import Image from "./img";
+import Background from "./components/background/Background";
+import Font from "./components/font/Font";
+import GradationText from "./components/gradationText/GradationText";
+import Marquee from "./components/marquee/Marquee";
+import OutlineText from "./components/outlineText/OutlineText";
+import Rotator from "./components/rotator/Rotator";
+import Zoom from "./components/zoom/Zoom";
+import Center from "./components/center/Center";
+import Blink from "./components/blink/Blink";
 
 export {
   Button,
@@ -39,5 +48,14 @@ export {
   Pager,
   ProgressBar,
   Tabs,
-  Image
+  Image,
+  Background,
+  Font,
+  GradationText,
+  Marquee,
+  OutlineText,
+  Rotator,
+  Zoom,
+  Center,
+  Blink
 };
