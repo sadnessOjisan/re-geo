@@ -18,15 +18,7 @@ const P = (props: Props) => {
 };
 
 const StyledP = styled.p`
-  margin: 0 0 10px;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
   line-height: 20px;
   color: ${props => (props.color ? props.color : "#ff0")};
