@@ -1,27 +1,71 @@
-import React from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "./Button";
 import ButtonGroup from "./ButtonGroup";
+import { withInfo } from "@storybook/addon-info";
 
-storiesOf("Button", module)
-  .add("default", () => <Button>HeyHeyHey</Button>)
-  .add("primary", () => <Button type="primary">fiowehjfowehf</Button>)
-  .add("primary small", () => (
-    <Button type="primary" size="small">
-      これはprimary
-    </Button>
-  ))
-  .add("primary large", () => (
-    <Button type="primary" size="large">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("info", () => <Button type="info">fiowehjfowehf</Button>)
-  .add("info small", () => (
-    <Button type="info" size="small">
-      fiowehjfowehf
-    </Button>
-  ))
+const text = `  
+### what
+button tag. 
+`;
+
+const stories = storiesOf("Button", module);
+
+stories
+  .add(
+    "default",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button>HeyHeyHey</Button>)
+  )
+  .add(
+    "primary",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="primary">fiowehjfowehf</Button>)
+  )
+  .add(
+    "primary small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="primary" size="small">
+        これはprimary
+      </Button>
+    ))
+  )
+  .add(
+    "primary large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="primary" size="large">
+        これはprimary
+      </Button>
+    ))
+  )
+  .add(
+    "info",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="info">fiowehjfowehf</Button>)
+  )
+  .add(
+    "info small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="info" size="small">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
   .add("info large", () => (
     <Button type="info" size="large">
       fiowehjfowehf

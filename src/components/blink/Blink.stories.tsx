@@ -1,5 +1,5 @@
 import * as React from "react";
-import { storiesOf, setAddon } from "@storybook/react";
+import { storiesOf } from "@storybook/react";
 import Blink from "./Blink";
 import { withInfo } from "@storybook/addon-info";
 
@@ -7,6 +7,7 @@ const text = `
 ### what
 blink tag.
 `;
+
 const stories = storiesOf("Blink", module);
 
 stories

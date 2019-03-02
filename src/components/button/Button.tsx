@@ -17,16 +17,21 @@ interface Props {
   isDisable?: boolean;
 }
 
-const StyledButton = (props: Props) => {
+const Button = (props: Props) => {
   const { className, children, type, size, isDisable } = props;
   return (
-    <Button className={className} type={type} size={size} isDisable={isDisable}>
+    <SButton
+      className={className}
+      type={type}
+      size={size}
+      isDisable={isDisable}
+    >
       {children}
-    </Button>
+    </SButton>
   );
 };
 
-const Button = styled.a`
+const SButton = styled.a<Props>`
   border: 6px ridge #bbb;
   padding: ${(props: Props) => {
     switch (props.size) {
@@ -105,4 +110,4 @@ const Button = styled.a`
     sans-serif;
 `;
 
-export default StyledButton;
+export default Button;

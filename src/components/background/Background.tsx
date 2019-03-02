@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import Image from "../../img/index";
 
 interface Props {
@@ -35,10 +34,5 @@ const DivWithPattern = styled.div`
     1;
   }};
 `;
-
-BackGround.propTypes = {
-  className: PropTypes.string,
-  pattern: PropTypes.oneOf(["stars", "microfab", "rainbow"]).isRequired
-};
 
 export default BackGround;
