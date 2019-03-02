@@ -29,6 +29,7 @@ import Rotator from "./components/rotator/Rotator";
 import Zoom from "./components/zoom/Zoom";
 import Center from "./components/center/Center";
 import Blink from "./components/blink/Blink";
+import Table from "./components/table/Table";
 
 export {
   Button,
@@ -57,5 +58,6 @@ export {
   Rotator,
   Zoom,
   Center,
-  Blink
+  Blink,
+  Table
 };
