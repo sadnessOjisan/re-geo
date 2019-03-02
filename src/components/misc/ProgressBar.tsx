@@ -7,7 +7,7 @@ interface Props {
 }
 
 const ProgressBar = (props: Props) => {
-  const {className} = props
+  const { className } = props;
   return (
     <div className="progress" className={className}>
       <StyledBar className="bar" />

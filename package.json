@@ -20,8 +20,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --fix './src/**/*.ts'",
-    "format": "prettier --write './src/**/*.ts'",
+    "lint": "eslint --fix './src/**/*.{ts,tsx}'",
+    "format": "prettier --write './src/**/*.{ts,tsx}'",
     "build:local": "BUILD_MODE='development' REACT_APP_ENV=local webpack",
     "build:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack",
     "build:stg": "BUILD_MODE='production' REACT_APP_ENV=staging webpack",
