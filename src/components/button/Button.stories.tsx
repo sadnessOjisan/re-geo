@@ -66,68 +66,158 @@ stories
       </Button>
     ))
   )
-  .add("info large", () => (
-    <Button type="info" size="large">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("success", () => <Button type="success">fiowehjfowehf</Button>)
-  .add("success small", () => (
-    <Button type="success" size="small">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("success large", () => (
-    <Button type="success" size="large">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("success disable", () => (
-    <Button type="success" isDisable>
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("warning", () => <Button type="warning">fiowehjfowehf</Button>)
-  .add("warning small", () => (
-    <Button type="warning" size="small">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("warning large", () => (
-    <Button type="warning" size="large">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("danger", () => <Button type="danger">fiowehjfowehf</Button>)
-  .add("danger small", () => (
-    <Button type="danger" size="small">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("danger large", () => (
-    <Button type="danger" size="large">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("inverse", () => <Button type="inverse">fiowehjfowehf</Button>)
-  .add("inverse small", () => (
-    <Button type="inverse" size="small">
-      fiowehjfowehf
-    </Button>
-  ))
-  .add("inverse large", () => (
-    <Button type="inverse" size="large">
-      fiowehjfowehf
-    </Button>
-  ));
+  .add(
+    "info large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="info" size="large">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "success",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="success">fiowehjfowehf</Button>)
+  )
+  .add(
+    "success small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="success" size="small">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "success large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="success" size="large">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "success disable",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="success" isDisable>
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "warning",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="warning">fiowehjfowehf</Button>)
+  )
+  .add(
+    "warning small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="warning" size="small">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "warning large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="warning" size="large">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "danger",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="danger">fiowehjfowehf</Button>)
+  )
+  .add(
+    "danger small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="danger" size="small">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "danger large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="danger" size="large">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "inverse",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <Button type="inverse">fiowehjfowehf</Button>)
+  )
+  .add(
+    "inverse small",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="inverse" size="small">
+        fiowehjfowehf
+      </Button>
+    ))
+  )
+  .add(
+    "inverse large",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <Button type="inverse" size="large">
+        fiowehjfowehf
+      </Button>
+    ))
+  );
 
-storiesOf("Split Button", module).add("default", () => (
-  <ButtonGroup>
-    <Button type="primary" size="large">
-      heyheyhey
-    </Button>
-    <Button type="inverse" size="large">
-      heyheyhey
-    </Button>
-  </ButtonGroup>
-));
+storiesOf("Split Button", module).add(
+  "inverse large",
+  withInfo({
+    inline: true,
+    text: text
+  })(() => (
+    <ButtonGroup>
+      <Button type="primary" size="large">
+        heyheyhey
+      </Button>
+      <Button type="inverse" size="large">
+        heyheyhey
+      </Button>
+    </ButtonGroup>
+  ))
+);

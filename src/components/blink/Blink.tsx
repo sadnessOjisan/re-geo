@@ -26,7 +26,7 @@ const Blinker = keyframes`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<Props>`
   animation: ${Blinker} ${(props: Props) => (props.speed ? props.speed : 0.15)}s
     step-end infinite;
 `;

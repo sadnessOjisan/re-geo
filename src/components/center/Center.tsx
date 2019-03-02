@@ -21,7 +21,7 @@ const Center = (props: Props) => {
   );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<Props>`
   display: flex;
   height: ${(props: Props) => props.vertical && "100%"};
   align-items: ${(props: Props) => props.vertical && "center"};

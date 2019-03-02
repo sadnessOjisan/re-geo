@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-const StyledButtonGroup = (props: Props) => {
+const ButtonGroup = (props: Props) => {
   const { className, children } = props;
-  return <ButtonGroup className={className}>{children}</ButtonGroup>;
+  return <SButtonGroup className={className}>{children}</SButtonGroup>;
 };
 
-const ButtonGroup = styled.div`
+const SButtonGroup = styled.div`
   position: relative;
   display: inline-block;
   font-size: 0;
@@ -19,4 +19,4 @@ const ButtonGroup = styled.div`
   vertical-align: middle;
 `;
 
-export default StyledButtonGroup;
+export default ButtonGroup;

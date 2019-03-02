@@ -1,7 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Blink from "./Blink";
 import { withInfo } from "@storybook/addon-info";
+import Blink from "./Blink";
+
 
 const text = `  
 ### what

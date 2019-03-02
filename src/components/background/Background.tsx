@@ -17,7 +17,7 @@ const BackGround = (props: Props) => {
   );
 };
 
-const DivWithPattern = styled.div`
+const DivWithPattern = styled.div<Props>`
   width: 100%;
   height: 100%;
   background: ${(props: Props) => {
