@@ -1,6 +1,6 @@
 {
   "name": "re-geo",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",

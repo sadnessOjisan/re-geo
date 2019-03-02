@@ -4,12 +4,13 @@ import Image from "../../img";
 
 interface Props {
   children: React.ReactNode;
+  className?: string;
   pattern: "stars" | "microfab" | "rainbow";
 }
 
 const BackGround = (props: Props) => {
-  const { children, pattern } = props;
-  return <DivWithPattern pattern={pattern}>{children}</DivWithPattern>;
+  const { children, pattern,className } = props;
+  return <DivWithPattern pattern={pattern} className={className}>{children}</DivWithPattern>;
 };
 
 const DivWithPattern = styled.div`

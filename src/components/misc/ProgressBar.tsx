@@ -2,11 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 import Bar from "../../img/progress.gif";
 
-interface Props {}
+interface Props {
+  className?: string;
+}
 
 const ProgressBar = (props: Props) => {
+  const {className} = props
   return (
-    <div className="progress">
+    <div className="progress" className={className}>
       <StyledBar className="bar" />
     </div>
   );

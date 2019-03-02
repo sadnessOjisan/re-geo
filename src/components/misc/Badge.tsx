@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface Props {
   type: "success" | "warning" | "important" | "info" | "inverse" | null;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const ProgressBar = (props: Props) => {
