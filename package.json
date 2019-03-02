@@ -1,6 +1,6 @@
 {
   "name": "re-geo",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
@@ -12,8 +12,6 @@
     "dist"
   ],
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.2",

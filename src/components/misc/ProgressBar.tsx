@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.css";
 import Bar from "../../img/progress.gif";
 
 interface Props {}
