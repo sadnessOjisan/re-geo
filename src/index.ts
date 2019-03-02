@@ -21,6 +21,7 @@ import Zoom from "./components/zoom/Zoom";
 import Center from "./components/center/Center";
 import Blink from "./components/blink/Blink";
 import Table from "./components/table/Table";
+import Alerts from "./components/misc/Alerts";
 
 export {
   Button,
@@ -44,5 +45,6 @@ export {
   Zoom,
   Center,
   Blink,
-  Table
+  Table,
+  Alerts
 };
