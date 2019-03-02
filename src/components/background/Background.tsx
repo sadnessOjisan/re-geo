@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
-import Image from "../../img";
+import PropTypes from "prop-types";
+import Image from "../../img/index";
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   pattern: "stars" | "microfab" | "rainbow";
 }
@@ -31,7 +32,13 @@ const DivWithPattern = styled.div`
       default:
         return "#000";
     }
+    1;
   }};
 `;
+
+BackGround.propTypes = {
+  className: PropTypes.string,
+  pattern: PropTypes.oneOf(["stars", "microfab", "rainbow"]).isRequired
+};
 
 export default BackGround;
