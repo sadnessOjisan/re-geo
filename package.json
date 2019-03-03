@@ -12,6 +12,7 @@
     "dist"
   ],
   "dependencies": {
+    "re-geo": "^0.0.18",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "styled-components": "^4.1.3"
