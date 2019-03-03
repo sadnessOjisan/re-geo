@@ -5,8 +5,8 @@ import Background from "./Background";
 import { withInfo } from "@storybook/addon-info";
 
 const text = `  
-### sample
-aaa
+### Note
+This component has 100% height and width.
 `;
 
 const stories = storiesOf("Background", module);

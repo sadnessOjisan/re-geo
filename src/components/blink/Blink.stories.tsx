@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import Blink from "./Blink";
 
-
 const text = `  
 ### what
 blink tag.

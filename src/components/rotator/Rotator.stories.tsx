@@ -22,7 +22,8 @@ storiesOf("Rotator", module)
       inline: true,
       text: text
     })(() => <Rotator speed={1}>Hello Rotator</Rotator>)
-  ).add(
+  )
+  .add(
     "slow",
     withInfo({
       inline: true,

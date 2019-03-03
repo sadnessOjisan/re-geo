@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import COLOR from "../../constants/color";
 import Drudgesiren from "../../img/drudgesiren.gif";
 
 interface Props {
@@ -37,46 +38,43 @@ const StyledAlerts = styled.div<Props>`
   color: ${(props: Props) => {
     switch (props.type) {
       case "alert":
-        return "#000";
+        return COLOR.black;
       case "error":
-        return "#fff";
+        return COLOR.white;
       case "success":
-        return "#fff";
+        return COLOR.white;
       case "info":
-        return "#000";
+        return COLOR.black;
     }
   }};
   background-color: ${(props: Props) => {
     switch (props.type) {
       case "alert":
-        return "#ff0";
+        return COLOR.yellow1;
       case "error":
-        return "#f00";
+        return COLOR.red;
       case "success":
-        return "#0a0";
+        return COLOR.green;
       case "info":
-        return "#0ff";
+        return COLOR.cyan;
     }
   }};
   border: ${(props: Props) => {
     switch (props.type) {
       case "alert":
-        return "1px solid #f00";
+        return `1px solid ${COLOR.red}`;
       case "error":
-        return "1px solid #f00";
+        return `1px solid ${COLOR.red}`;
       case "success":
-        return "1px solid #0a0";
+        return `1px solid ${COLOR.green}`;
       case "info":
-        return "1px solid #aa0";
+        return `1px solid ${COLOR.yellowDark}`;
     }
   }};
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   display: block;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
 `;
 
 const StyledImg = styled.img`
@@ -91,26 +89,20 @@ const Close = styled.a`
   float: right;
   font-size: 20px;
   font-weight: bold;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
+  color: ${COLOR.black};
+  text-shadow: 0 1px 0 ${COLOR.white};
   opacity: 0.2;
   text-decoration: underline;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   margin-right: 4px;
 `;
 
 const Title = styled.strong`
   font-weight: bold;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
 `;
 
 const AlertTitle = styled.h4`
   margin: 0;
-  color: #000;
+  color: ${COLOR.black};
   font-size: 20px;
   font-family: inherit;
   font-weight: bold;
@@ -122,9 +114,6 @@ const AlertTitle = styled.h4`
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
 `;
 
 export default Alerts;
