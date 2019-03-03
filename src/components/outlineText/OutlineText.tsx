@@ -7,7 +7,7 @@ interface Props {
   size: number;
   inlineColor: string;
   outlineColor: string;
-  strokeWidth: string;
+  strokeWidth: number;
 }
 
 const OutlineText = (props: Props) => {
@@ -32,11 +32,11 @@ const OutlineText = (props: Props) => {
   );
 };
 
-const StyledText = styled.span`
-  color: ${props => props.inlineColor};
-  font-size: ${props => props.size}px;
-  -webkit-text-stroke-color: ${props => props.outlineColor};
-  -webkit-text-stroke-width: ${props => props.strokeWidth}px;
+const StyledText = styled.span<Props>`
+  color: ${(props: Props) => props.inlineColor};
+  font-size: ${(props: Props) => props.size}px;
+  -webkit-text-stroke-color: ${(props: Props) => props.outlineColor};
+  -webkit-text-stroke-width: ${(props: Props) => props.strokeWidth}px;
 `;
 
 export default OutlineText;

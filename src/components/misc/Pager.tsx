@@ -7,7 +7,7 @@ interface Props {
   className?: string;
 }
 
-const ProgressBar = (props: Props) => {
+const Pager = (props: Props) => {
   const { type, children, className } = props;
   return (
     <Wrapper className={className}>
@@ -31,7 +31,8 @@ const Link = styled.a`
   border: 1px solid #ddd;
   border-radius: 15px;
   text-decoration: underline;
-  color: ${props => (props.type === "disabled" ? "#999" : "#0ee")} !important;
+  color: ${(props: Props) =>
+    props.type === "disabled" ? "#999" : "#0ee"} !important;
   font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
     "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
     sans-serif;
@@ -40,4 +41,4 @@ const Link = styled.a`
   background-color: #fff;
 `;
 
-export default ProgressBar;
+export default Pager;

@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 interface Props {
   children: React.ReactNode;
-  color: string | null;
-  fontSize: number;
-  className: string;
+  color?: string;
+  fontSize?: number;
+  className?: string;
 }
 
 const P = (props: Props) => {
@@ -17,11 +17,11 @@ const P = (props: Props) => {
   );
 };
 
-const StyledP = styled.p`
+const StyledP = styled.p<Props>`
   display: block;
-  font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
+  font-size: ${(props: Props) => (props.fontSize ? props.fontSize : "16px")};
   line-height: 20px;
-  color: ${props => (props.color ? props.color : "#ff0")};
+  color: ${(props: Props) => (props.color ? props.color : "#ff0")};
 `;
 
 export default P;

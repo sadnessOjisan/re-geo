@@ -2,12 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 
 interface Props {
-  type: "success" | "warning" | "important" | "info" | "inverse" | null;
+  type?: "success" | "warning" | "important" | "info" | "inverse";
   children: React.ReactNode;
   className?: string;
 }
 
-const ProgressBar = (props: Props) => {
+const Badge = (props: Props) => {
   const { type, children, className } = props;
   return (
     <StyledBadge type={type} className={className}>
@@ -16,7 +16,7 @@ const ProgressBar = (props: Props) => {
   );
 };
 
-const StyledBadge = styled.span`
+const StyledBadge = styled.span<Props>`
   font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
     "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
     sans-serif;
@@ -57,4 +57,4 @@ const StyledBadge = styled.span`
   }};
 `;
 
-export default ProgressBar;
+export default Badge;

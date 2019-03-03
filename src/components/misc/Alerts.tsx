@@ -6,7 +6,7 @@ interface Props {
   type: "alert" | "error" | "success" | "info";
   children: React.ReactNode;
   className?: string;
-  onClose: any;
+  onClose?: any;
 }
 
 const Alerts = (props: Props) => {
@@ -32,7 +32,7 @@ const Alerts = (props: Props) => {
   }
 };
 
-const StyledAlerts = styled.div`
+const StyledAlerts = styled.div<Props>`
   width: 100%;
   color: ${(props: Props) => {
     switch (props.type) {

@@ -1,37 +1,59 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { linkTo } from "@storybook/addon-links";
+import { withInfo } from "@storybook/addon-info";
 import OutlineText from "./OutlineText";
 
+const text = `  
+### what
+blink tag.
+`;
+
 storiesOf("OutlineText", module)
-  .add("red", () => (
-    <OutlineText
-      size={36}
-      strokeWidth={2}
-      inlineColor="white"
-      outlineColor="red"
-    >
-      Hello OutlineText
-    </OutlineText>
-  ))
-  .add("blue", () => (
-    <OutlineText
-      size={36}
-      strokeWidth={2}
-      inlineColor="white"
-      outlineColor="blue"
-    >
-      Hello OutlineText
-    </OutlineText>
-  ))
-  .add("inner red", () => (
-    <OutlineText
-      size={36}
-      strokeWidth={2}
-      inlineColor="red"
-      outlineColor="blue"
-    >
-      Hello OutlineText
-    </OutlineText>
-  ));
+  .add(
+    "red",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <OutlineText
+        size={36}
+        strokeWidth={2}
+        inlineColor="white"
+        outlineColor="red"
+      >
+        Hello OutlineText
+      </OutlineText>
+    ))
+  )
+  .add(
+    "blue",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <OutlineText
+        size={36}
+        strokeWidth={2}
+        inlineColor="white"
+        outlineColor="blue"
+      >
+        Hello OutlineText
+      </OutlineText>
+    ))
+  )
+  .add(
+    "inner red",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => (
+      <OutlineText
+        size={36}
+        strokeWidth={2}
+        inlineColor="red"
+        outlineColor="blue"
+      >
+        Hello OutlineText
+      </OutlineText>
+    ))
+  );

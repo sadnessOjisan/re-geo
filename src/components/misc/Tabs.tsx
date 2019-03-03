@@ -1,26 +1,32 @@
 import * as React from "react";
 import styled from "styled-components";
 
-interface Props {
-  selectedId: string;
-  className?: string;
-  tabs: ITab[];
-}
-
 interface ITab {
   id: string;
   name: string;
   content: React.ReactNode;
 }
 
+interface Props {
+  selectedId: string;
+  className?: string;
+  tabs: ITab[];
+  onClickTab?: any;
+}
+
 const Tabs = (props: Props) => {
-  const { tabs, className, selectedId } = props;
+  const { tabs, className, selectedId, onClickTab } = props;
   return (
     <React.Fragment>
       <TabUl className={className}>
         {tabs.map(tab => (
           <TabLi>
-            <Link isActive={selectedId === tab.id}>{tab.name}</Link>
+            <Link
+              isActive={selectedId === tab.id}
+              onClick={(_: string) => onClickTab(tab.id)}
+            >
+              {tab.name}
+            </Link>
           </TabLi>
         ))}
       </TabUl>
@@ -72,7 +78,7 @@ const TabLi = styled.li`
   list-style: none;
 `;
 
-const Link = styled.a`
+const Link = styled.a<{ isActive: boolean }>`
   text-decoration: underline !important;
   display: block;
   padding-right: 12px;
@@ -82,10 +88,11 @@ const Link = styled.a`
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: 20px;
-  color: ${props => (props.isActive ? "#555" : "#0ee")} !important;
+  color: ${(props: Props) => (props.isActive ? "#555" : "#0ee")} !important;
   cursor: default;
-  background-color: ${props => (props.isActive ? "#00f" : "")};
-  border: ${props => (props.isActive ? "1px solid #ddd" : "")} !important;
+  background-color: ${(props: Props) => (props.isActive ? "#00f" : "")};
+  border: ${(props: Props) =>
+    props.isActive ? "1px solid #ddd" : ""} !important;
   border-bottom-color: transparent;
 `;
 

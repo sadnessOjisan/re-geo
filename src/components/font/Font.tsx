@@ -17,7 +17,7 @@ const Font = (props: Props) => {
   );
 };
 
-const StyledText = styled.span`
+const StyledText = styled.span<Props>`
   display: flex;
   color: ${(props: Props) => (props.color ? props.color : "black")};
   font-size: ${(props: Props) => (props.size ? props.size : 16)}px;

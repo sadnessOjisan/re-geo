@@ -24,7 +24,7 @@ const StyledPill = styled.li`
   display: list-item;
 `;
 
-const Link = styled.a`
+const Link = styled.a<Props>`
   padding-top: 8px;
   padding-bottom: 8px;
   margin-top: 2px;
@@ -37,9 +37,10 @@ const Link = styled.a`
   display: inline-block; /* WHY? */
   text-decoration: underline;
   cursor: pointer;
-  color: ${props =>
+  color: ${(props: Props) =>
     props.isActive ? "#fff" : props.isDisable ? "#999" : "#0ee"} !important;
-  background-color: ${props => (props.isActive ? "#0ee" : "#fff")} !important;
+  background-color: ${(props: Props) =>
+    props.isActive ? "#0ee" : "#fff"} !important;
 `;
 
 export default Pill;

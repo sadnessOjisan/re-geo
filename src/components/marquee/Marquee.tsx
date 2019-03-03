@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 interface Props {
   width?: string;
-  behavior?: string;
+  behavior?: "slide" | "alternate";
   bgcolor?: string;
   direction?: string;
   height?: string;

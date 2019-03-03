@@ -26,9 +26,9 @@ const Rotate = keyframes`
 }
 `;
 
-const Wrapper = styled.div`
-  animation: ${Rotate} ${props => (props.speed ? props.speed : 5)}s linear
-    infinite;
+const Wrapper = styled.div<Props>`
+  animation: ${Rotate} ${(props: Props) => (props.speed ? props.speed : 5)}s
+    linear infinite;
   display: inline-block;
 `;
 

@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const PilNav = (props: Props) => {
+const PillNav = (props: Props) => {
   const { children, className } = props;
   return <Nav className={className}>{children}</Nav>;
 };
@@ -25,4 +25,4 @@ const Nav = styled.ul`
   padding-inline-start: 40px;
 `;
 
-export default PilNav;
+export default PillNav;

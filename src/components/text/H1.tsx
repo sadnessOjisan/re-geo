@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface Props {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const H1 = (props: Props) => {

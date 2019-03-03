@@ -7,10 +7,10 @@ interface Props {
   rows: React.ReactNode[][];
 }
 
-const StyledTable = (props: Props) => {
+const Table = (props: Props) => {
   const { headers, rows } = props;
   return (
-    <Table>
+    <STable>
       <Thead>
         <Tr>
           {headers.map(header => (
@@ -27,11 +27,11 @@ const StyledTable = (props: Props) => {
           </Tr>
         ))}
       </Tbody>
-    </Table>
+    </STable>
   );
 };
 
-const Table = styled.table`
+const STable = styled.table`
   border: 1px solid #008000;
   border-collapse: separate;
   border-left: 0;
@@ -80,8 +80,9 @@ const Tbody = styled.tbody`
   border-collapse: separate;
 `;
 
-const Td = styled.td`
-  background-color: ${props => props.ridx % 2 === 0 && "#000"};
+const Td = styled.td<{ ridx: number }>`
+  background-color: ${(props: { ridx: number }) =>
+    props.ridx % 2 === 0 && "#000"};
   border-left: 1px solid #008000;
   padding: 8px;
   line-height: 20px;
@@ -91,4 +92,4 @@ const Td = styled.td`
   display: table-cell;
 `;
 
-export default StyledTable;
+export default Table;

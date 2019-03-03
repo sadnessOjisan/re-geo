@@ -11,13 +11,13 @@ interface Props {
 const BackGround = (props: Props) => {
   const { children, pattern, className } = props;
   return (
-    <DivWithPattern pattern={pattern} className={className}>
+    <SBackGround pattern={pattern} className={className}>
       {children}
-    </DivWithPattern>
+    </SBackGround>
   );
 };
 
-const DivWithPattern = styled.div<Props>`
+const SBackGround = styled.div<Props>`
   width: 100%;
   height: 100%;
   background: ${(props: Props) => {
