@@ -4,8 +4,18 @@ import { withInfo } from "@storybook/addon-info";
 import Font from "./Font";
 
 const text = `  
-### what
-blink tag.
+  ### what
+  Font tag.
+
+  ### why I need
+  font tag is deprecated in html5. 
+
+  this tag was used in geo cities web site. 
+
+  And, I wanna revive in html5.
+
+  ### Source
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/font/Font.tsx)
 `;
 
 storiesOf("Font", module)

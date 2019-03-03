@@ -4,8 +4,14 @@ import { withInfo } from "@storybook/addon-info";
 import Blink from "./Blink";
 
 const text = `  
-### what
-blink tag.
+  ### what
+  Blink Tag.
+
+  ### Note
+  more decrease speed property, gain more speed.
+
+  ### Source
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/blink/Blink.tsx)
 `;
 
 const stories = storiesOf("Blink", module);

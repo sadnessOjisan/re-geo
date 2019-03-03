@@ -22,6 +22,8 @@ import Center from "./components/center/Center";
 import Blink from "./components/blink/Blink";
 import Table from "./components/table/Table";
 import Alerts from "./components/misc/Alerts";
+import COLOR from "./constants/color";
+import FontStyle from "./constants/font";
 
 export {
   Button,
@@ -46,5 +48,7 @@ export {
   Center,
   Blink,
   Table,
-  Alerts
+  Alerts,
+  COLOR,
+  FontStyle
 };

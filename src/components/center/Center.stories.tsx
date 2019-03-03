@@ -5,8 +5,18 @@ import { withInfo } from "@storybook/addon-info";
 import Center from "./Center";
 
 const text = `  
-### what
-blink tag.
+  ### what
+  Center tag.
+
+  ### why I need
+  center tag is deprecated in html5. [w3cschool](https://www.w3schools.com/tags/tag_center.asp). 
+
+  this tag was used in geo cities web site. 
+
+  And, I wanna revive in html5.
+
+  ### Source
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/button/Button.tsx)
 `;
 
 storiesOf("Center", module)

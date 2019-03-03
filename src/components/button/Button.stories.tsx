@@ -5,8 +5,11 @@ import ButtonGroup from "./ButtonGroup";
 import { withInfo } from "@storybook/addon-info";
 
 const text = `  
-### what
-button tag. 
+  ### what
+  Button tag.
+
+  ### Source
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/button/Button.tsx)
 `;
 
 const stories = storiesOf("Button", module);
@@ -24,7 +27,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="primary">fiowehjfowehf</Button>)
+    })(() => <Button type="primary">HeyHeyHey</Button>)
   )
   .add(
     "primary small",
@@ -33,7 +36,7 @@ stories
       text: text
     })(() => (
       <Button type="primary" size="small">
-        これはprimary
+        primary
       </Button>
     ))
   )
@@ -44,7 +47,7 @@ stories
       text: text
     })(() => (
       <Button type="primary" size="large">
-        これはprimary
+        primary
       </Button>
     ))
   )
@@ -53,7 +56,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="info">fiowehjfowehf</Button>)
+    })(() => <Button type="info">HeyHeyHey</Button>)
   )
   .add(
     "info small",
@@ -62,7 +65,7 @@ stories
       text: text
     })(() => (
       <Button type="info" size="small">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -73,7 +76,7 @@ stories
       text: text
     })(() => (
       <Button type="info" size="large">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -82,7 +85,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="success">fiowehjfowehf</Button>)
+    })(() => <Button type="success">HeyHeyHey</Button>)
   )
   .add(
     "success small",
@@ -91,7 +94,7 @@ stories
       text: text
     })(() => (
       <Button type="success" size="small">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -102,7 +105,7 @@ stories
       text: text
     })(() => (
       <Button type="success" size="large">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -113,7 +116,7 @@ stories
       text: text
     })(() => (
       <Button type="success" isDisable>
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -122,7 +125,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="warning">fiowehjfowehf</Button>)
+    })(() => <Button type="warning">HeyHeyHey</Button>)
   )
   .add(
     "warning small",
@@ -131,7 +134,7 @@ stories
       text: text
     })(() => (
       <Button type="warning" size="small">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -142,7 +145,7 @@ stories
       text: text
     })(() => (
       <Button type="warning" size="large">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -151,7 +154,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="danger">fiowehjfowehf</Button>)
+    })(() => <Button type="danger">HeyHeyHey</Button>)
   )
   .add(
     "danger small",
@@ -160,7 +163,7 @@ stories
       text: text
     })(() => (
       <Button type="danger" size="small">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -171,7 +174,7 @@ stories
       text: text
     })(() => (
       <Button type="danger" size="large">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -180,7 +183,7 @@ stories
     withInfo({
       inline: true,
       text: text
-    })(() => <Button type="inverse">fiowehjfowehf</Button>)
+    })(() => <Button type="inverse">HeyHeyHey</Button>)
   )
   .add(
     "inverse small",
@@ -189,7 +192,7 @@ stories
       text: text
     })(() => (
       <Button type="inverse" size="small">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   )
@@ -200,7 +203,7 @@ stories
       text: text
     })(() => (
       <Button type="inverse" size="large">
-        fiowehjfowehf
+        HeyHeyHey
       </Button>
     ))
   );

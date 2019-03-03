@@ -5,8 +5,14 @@ import Background from "./Background";
 import { withInfo } from "@storybook/addon-info";
 
 const text = `  
-### Note
-This component has 100% height and width.
+  ### what
+  Image Tiles.
+
+  ### Caution
+  This component has 100% height and width.
+
+  ### Source
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/background/Background.tsx)
 `;
 
 const stories = storiesOf("Background", module);
