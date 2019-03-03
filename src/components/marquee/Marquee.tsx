@@ -244,6 +244,7 @@ const Wrapper = styled.div`
   height: ${props => (props.height ? props.height : "16px")};
   overflow: hidden;
   display: flex;
+  align-items: center;
   flex-direction: ${props =>
     (props.direction === "up" || props.direction === "down") && "column"};
 `;
@@ -299,6 +300,8 @@ const Text = styled.p`
       : props.loopNum};
   white-space: nowrap;
   display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 0px;
 `;
 
 export default Remarquee;
