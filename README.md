@@ -1,7 +1,7 @@
 # re-geo
 
 react based geocities component.
-Here is components. https://zen-nightingale-960cf0.netlify.com
+Here is components. https://re-geo-storybook.netlify.com/
 
 This is inspired by [geo-bootstrap](https://github.com/divshot/geo-bootstrap). Thanks.
 
@@ -44,12 +44,10 @@ $ yarn run storybook
 
 ### deploy
 
-Befor deploy you should do
-
-- update version in `package.json`
+Befor deploy, you should update `package.json` version.
 
 ```
 $ yarn run build:prd
 
-$ // ここにnpm publish cmd
+$ npm publish
 ```
