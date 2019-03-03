@@ -42,9 +42,6 @@ const STable = styled.table`
   background-color: transparent;
   border-spacing: 0;
   display: table;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ff0;

@@ -54,9 +54,6 @@ const TabUl = styled.ul`
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   -webkit-font-smoothing: none;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ff0;
@@ -88,19 +85,18 @@ const Link = styled.a<{ isActive: boolean }>`
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: 20px;
-  color: ${(props: Props) => (props.isActive ? "#555" : "#0ee")} !important;
+  color: ${(props: { isActive: boolean }) =>
+    props.isActive ? "#555" : "#0ee"} !important;
   cursor: default;
-  background-color: ${(props: Props) => (props.isActive ? "#00f" : "")};
-  border: ${(props: Props) =>
+  background-color: ${(props: { isActive: boolean }) =>
+    props.isActive ? "#00f" : ""};
+  border: ${(props: { isActive: boolean }) =>
     props.isActive ? "1px solid #ddd" : ""} !important;
   border-bottom-color: transparent;
 `;
 
 const Tabbable = styled.div`
   display: block;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ff0;
@@ -109,9 +105,6 @@ const Tabbable = styled.div`
 const TabContent = styled.div`
   overflow: auto;
   display: block;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ff0;
@@ -119,9 +112,6 @@ const TabContent = styled.div`
 
 const TabPane = styled.div`
   display: block;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ff0;

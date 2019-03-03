@@ -8,10 +8,18 @@ const text = `
 blink tag.
 `;
 
-storiesOf("ProgressBar", module).add(
-  "blink",
-  withInfo({
-    inline: true,
-    text: text
-  })(() => <ProgressBar>😀 😎 👍 💯</ProgressBar>)
-);
+storiesOf("ProgressBar", module)
+  .add(
+    "100%",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <ProgressBar />)
+  )
+  .add(
+    "50%",
+    withInfo({
+      inline: true,
+      text: text
+    })(() => <ProgressBar rate={50} />)
+  );

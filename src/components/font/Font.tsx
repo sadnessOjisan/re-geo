@@ -21,9 +21,6 @@ const StyledText = styled.span<Props>`
   display: flex;
   color: ${(props: Props) => (props.color ? props.color : "black")};
   font-size: ${(props: Props) => (props.size ? props.size : 16)}px;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
 `;
 
 export default Font;

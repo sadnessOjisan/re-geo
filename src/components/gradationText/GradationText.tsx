@@ -35,9 +35,6 @@ const MoveAnimation = (props: Props) =>
   `;
 
 const StyledText = styled.span`
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   background: -webkit-linear-gradient(
     0deg,
     ${(props: Props) => props.colorArray[0]},

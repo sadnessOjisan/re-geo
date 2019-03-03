@@ -33,9 +33,6 @@ const Link = styled.a`
   text-decoration: underline;
   color: ${(props: Props) =>
     props.type === "disabled" ? "#999" : "#0ee"} !important;
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   font-size: 16px;
   cursor: default;
   background-color: #fff;

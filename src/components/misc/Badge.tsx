@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import COLOR from "../../constants/color";
 
 interface Props {
   type?: "success" | "warning" | "important" | "info" | "inverse";
@@ -17,9 +18,6 @@ const Badge = (props: Props) => {
 };
 
 const StyledBadge = styled.span<Props>`
-  font-family: "Comic Sans", "Comic Sans MS", "Chalkboard",
-    "ChalkboardSE-Regular", "Marker Felt", "Purisa", "URW Chancery L", cursive,
-    sans-serif;
   padding-right: 9px;
   padding-left: 9px;
   border-radius: 9px;
@@ -31,9 +29,9 @@ const StyledBadge = styled.span<Props>`
   color: ${(props: Props) => {
     switch (props.type) {
       case "warning":
-        return "black";
+        return COLOR.black;
       default:
-        return "#fff";
+        return COLOR.white;
     }
   }};
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -42,17 +40,17 @@ const StyledBadge = styled.span<Props>`
   background-color: ${(props: Props) => {
     switch (props.type) {
       case "success":
-        return "green";
+        return COLOR.green;
       case "warning":
-        return "yellow";
+        return COLOR.yellow1;
       case "important":
-        return "red";
+        return COLOR.red;
       case "info":
-        return "#0ff";
+        return COLOR.cyan;
       case "inverse":
-        return "black";
+        return COLOR.black;
       default:
-        return "#999";
+        return COLOR.Gray60;
     }
   }};
 `;
