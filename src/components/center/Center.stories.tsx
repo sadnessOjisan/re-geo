@@ -16,7 +16,7 @@ const text = `
   And, I wanna revive in html5.
 
   ### Source
-  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/button/Button.tsx)
+  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/center/Center.tsx)
 `;
 
 storiesOf("Center", module)

@@ -5,8 +5,8 @@ interface Props {
   className?: string;
   children: React.ReactNode;
   colorArray: string[];
-  isAnimate: boolean;
-  fontSize: number;
+  isAnimate?: boolean;
+  fontSize?: number;
 }
 
 const GradationText = (props: Props) => {
@@ -34,14 +34,14 @@ const MoveAnimation = (props: Props) =>
     ${Move} 1s linear infinite reverse;
   `;
 
-const StyledText = styled.span`
+const StyledText = styled.span<Props>`
   background: -webkit-linear-gradient(
     0deg,
     ${(props: Props) => props.colorArray[0]},
     ${(props: Props) => props.colorArray[1]},
     ${(props: Props) => props.colorArray[2]}
   );
-  font-size: ${props => (props.fontSize ? props.fontSize : 16)}px;
+  font-size: ${(props:Props) => (props.fontSize ? props.fontSize : 16)}px;
   -webkit-background-clip: text;
   background-size: 200% auto;
   -webkit-text-fill-color: transparent;

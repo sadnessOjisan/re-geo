@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 interface Props {
   width?: string;
   behavior?: "slide" | "alternate";
-  bgcolor?: string;
+  bgcolor?: "left" | "right" | "up" | "down";
   direction?: string;
   height?: string;
   hspace?: number;
