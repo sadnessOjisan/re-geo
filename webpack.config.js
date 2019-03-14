@@ -1,6 +1,7 @@
 const path = require("path");
 
 const env = process.env.BUILD_MODE;
+console.log("env: ", env);
 
 module.exports = {
   mode: env || "development",

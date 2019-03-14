@@ -1,6 +1,6 @@
 {
   "name": "re-geo",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "dist/build.js",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
@@ -30,7 +30,9 @@
     "build:local": "BUILD_MODE='development' REACT_APP_ENV=local webpack",
     "build:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack",
     "build:stg": "BUILD_MODE='production' REACT_APP_ENV=staging webpack",
-    "build:prd": "BUILD_MODE='production' REACT_APP_ENV=production webpack"
+    "build:prd": "BUILD_MODE='production' REACT_APP_ENV=production webpack",
+    "build:type": "tsc ./src/index.ts -d",
+    "tsd": "tsd"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -59,6 +61,7 @@
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "storybook-addon-jsx": "^6.0.0",
     "style-loader": "^0.23.1",
+    "tsd": "^0.6.5",
     "typescript": "^3.3.3",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.3",

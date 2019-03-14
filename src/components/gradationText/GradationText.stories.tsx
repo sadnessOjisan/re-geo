@@ -5,7 +5,10 @@ import GradationText from "./GradationText";
 
 const text = `  
 ### what
-blink tag.
+gradation text tag.
+
+### cation
+under v1.0.0, colorArray needs length 3 array.
 `;
 
 storiesOf("GradationText", module)
