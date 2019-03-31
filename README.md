@@ -1,5 +1,8 @@
 # re-geo
 
+![image](https://github.com/sadnessOjisan/re-geo/blob/master/sampleImage.png?raw=true)
+
+
 react based geocities component.
 Here is components. https://re-geo-storybook.netlify.com/
 
