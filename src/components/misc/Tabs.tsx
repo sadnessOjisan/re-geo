@@ -23,7 +23,7 @@ const Tabs = (props: Props) => {
           <TabLi>
             <Link
               isActive={selectedId === tab.id}
-              onClick={(_: string) => onClickTab(tab.id)}
+              onClick={(_: React.SyntheticEvent) => onClickTab(tab.id)}
             >
               {tab.name}
             </Link>
