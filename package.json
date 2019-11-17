@@ -12,7 +12,6 @@
     "dist"
   ],
   "dependencies": {
-    "re-geo": "^0.0.18",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "styled-components": "^4.1.3"
@@ -27,6 +26,7 @@
     "build-storybook": "build-storybook",
     "lint": "eslint --fix './src/**/*.{ts,tsx}'",
     "format": "prettier --write './src/**/*.{ts,tsx}'",
+    "tc": "tsc -p . --noEmit",
     "build:local": "BUILD_MODE='development' REACT_APP_ENV=local webpack",
     "build:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack",
     "build:stg": "BUILD_MODE='production' REACT_APP_ENV=staging webpack",
