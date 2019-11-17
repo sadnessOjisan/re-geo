@@ -12,7 +12,7 @@ module.exports = ({ config }) => {
   });
   config.module.rules.push({
     test: /\.(png|jpg|gif)$/,
-    loader: "file-loader"
+    loader: "url-loader"
   });
   config.resolve.extensions.push(".ts", ".tsx", ".gif", ".css", "jpg", "png");
 
