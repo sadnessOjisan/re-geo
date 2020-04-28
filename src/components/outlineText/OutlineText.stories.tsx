@@ -13,7 +13,7 @@ storiesOf("OutlineText", module)
     "red",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <OutlineText
         size={36}
@@ -29,7 +29,7 @@ storiesOf("OutlineText", module)
     "blue",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <OutlineText
         size={36}
@@ -45,7 +45,7 @@ storiesOf("OutlineText", module)
     "inner red",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <OutlineText
         size={36}

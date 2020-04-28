@@ -13,20 +13,20 @@ storiesOf("zoom", module)
     "default",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Zoom>Hello Zoom</Zoom>)
   )
   .add(
     "speedy",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Zoom speed={1}>Hello Zoom</Zoom>)
   )
   .add(
     "slow",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Zoom speed={10}>Hello Zoom</Zoom>)
   );

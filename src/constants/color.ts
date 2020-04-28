@@ -21,6 +21,6 @@ export const COLOR = {
   black,
   yellow1,
   green,
-  yellowDark
+  yellowDark,
 };
 export default COLOR;

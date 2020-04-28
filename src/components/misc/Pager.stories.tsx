@@ -13,13 +13,13 @@ storiesOf("Pager", module)
     "default",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Pager>default</Pager>)
   )
   .add(
     "disabled",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Pager type="disabled">disabled</Pager>)
   );

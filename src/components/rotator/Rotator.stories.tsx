@@ -13,20 +13,20 @@ storiesOf("Rotator", module)
     "0 => 360",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Rotator>Hello Rotator</Rotator>)
   )
   .add(
     "speedy",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Rotator speed={1}>Hello Rotator</Rotator>)
   )
   .add(
     "slow",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Rotator speed={10}>Hello Rotator</Rotator>)
   );

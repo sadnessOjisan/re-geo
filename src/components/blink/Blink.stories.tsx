@@ -21,7 +21,7 @@ stories
     "normal",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return <Blink>😀 😎 👍 💯</Blink>;
     })
@@ -30,7 +30,7 @@ stories
     "fast",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return <Blink speed={0.05}>😀 😎 👍 💯</Blink>;
     })
@@ -39,7 +39,7 @@ stories
     "late",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return <Blink speed={1}>😀 😎 👍 💯</Blink>;
     })

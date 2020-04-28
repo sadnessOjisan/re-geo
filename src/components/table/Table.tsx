@@ -13,7 +13,7 @@ const Table = (props: Props) => {
     <STable>
       <Thead>
         <Tr>
-          {headers.map(header => (
+          {headers.map((header) => (
             <Th>{header}</Th>
           ))}
         </Tr>
@@ -21,7 +21,7 @@ const Table = (props: Props) => {
       <Tbody>
         {rows.map((row, ridx) => (
           <Tr>
-            {row.map(d => (
+            {row.map((d) => (
               <Td ridx={ridx}>{d}</Td>
             ))}
           </Tr>

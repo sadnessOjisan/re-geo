@@ -50,5 +50,5 @@ export {
   Table,
   Alerts,
   COLOR,
-  FontStyle
+  FontStyle,
 };

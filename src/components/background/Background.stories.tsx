@@ -22,7 +22,7 @@ stories
     "stars",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return (
         <Wrapper>
@@ -37,7 +37,7 @@ stories
     "microfab",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return (
         <Wrapper>
@@ -52,7 +52,7 @@ stories
     "rainbow",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => {
       return (
         <Wrapper>

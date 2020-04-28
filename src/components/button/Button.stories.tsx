@@ -19,21 +19,21 @@ stories
     "default",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button>HeyHeyHey</Button>)
   )
   .add(
     "primary",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="primary">HeyHeyHey</Button>)
   )
   .add(
     "primary small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="primary" size="small">
         primary
@@ -44,7 +44,7 @@ stories
     "primary large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="primary" size="large">
         primary
@@ -55,14 +55,14 @@ stories
     "info",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="info">HeyHeyHey</Button>)
   )
   .add(
     "info small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="info" size="small">
         HeyHeyHey
@@ -73,7 +73,7 @@ stories
     "info large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="info" size="large">
         HeyHeyHey
@@ -84,14 +84,14 @@ stories
     "success",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="success">HeyHeyHey</Button>)
   )
   .add(
     "success small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="success" size="small">
         HeyHeyHey
@@ -102,7 +102,7 @@ stories
     "success large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="success" size="large">
         HeyHeyHey
@@ -113,7 +113,7 @@ stories
     "success disable",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="success" isDisable>
         HeyHeyHey
@@ -124,14 +124,14 @@ stories
     "warning",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="warning">HeyHeyHey</Button>)
   )
   .add(
     "warning small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="warning" size="small">
         HeyHeyHey
@@ -142,7 +142,7 @@ stories
     "warning large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="warning" size="large">
         HeyHeyHey
@@ -153,14 +153,14 @@ stories
     "danger",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="danger">HeyHeyHey</Button>)
   )
   .add(
     "danger small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="danger" size="small">
         HeyHeyHey
@@ -171,7 +171,7 @@ stories
     "danger large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="danger" size="large">
         HeyHeyHey
@@ -182,14 +182,14 @@ stories
     "inverse",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Button type="inverse">HeyHeyHey</Button>)
   )
   .add(
     "inverse small",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="inverse" size="small">
         HeyHeyHey
@@ -200,7 +200,7 @@ stories
     "inverse large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Button type="inverse" size="large">
         HeyHeyHey
@@ -212,7 +212,7 @@ storiesOf("Split Button", module).add(
   "inverse large",
   withInfo({
     inline: true,
-    text: text
+    text: text,
   })(() => (
     <ButtonGroup>
       <Button type="primary" size="large">

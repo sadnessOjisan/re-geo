@@ -19,7 +19,7 @@ const Tabs = (props: Props) => {
   return (
     <React.Fragment>
       <TabUl className={className}>
-        {tabs.map(tab => (
+        {tabs.map((tab) => (
           <TabLi>
             <Link
               isActive={selectedId === tab.id}
@@ -33,7 +33,7 @@ const Tabs = (props: Props) => {
       <Tabbable>
         <TabContent>
           <TabPane>
-            {tabs.filter(tab => tab.id === selectedId)[0].content}
+            {tabs.filter((tab) => tab.id === selectedId)[0].content}
           </TabPane>
         </TabContent>
       </Tabbable>

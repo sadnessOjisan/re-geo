@@ -13,7 +13,7 @@ storiesOf("Pill", module).add(
   "default",
   withInfo({
     inline: true,
-    text: text
+    text: text,
   })(() => (
     <PillNav>
       <Pill>default</Pill>

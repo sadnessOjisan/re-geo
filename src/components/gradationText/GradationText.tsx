@@ -41,7 +41,7 @@ const StyledText = styled.span<Props>`
     ${(props: Props) => props.colorArray[1]},
     ${(props: Props) => props.colorArray[2]}
   );
-  font-size: ${(props:Props) => (props.fontSize ? props.fontSize : 16)}px;
+  font-size: ${(props: Props) => (props.fontSize ? props.fontSize : 16)}px;
   -webkit-background-clip: text;
   background-size: 200% auto;
   -webkit-text-fill-color: transparent;

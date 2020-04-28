@@ -13,13 +13,13 @@ storiesOf("ProgressBar", module)
     "100%",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <ProgressBar />)
   )
   .add(
     "50%",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <ProgressBar rate={50} />)
   );

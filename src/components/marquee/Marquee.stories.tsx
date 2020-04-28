@@ -26,21 +26,21 @@ storiesOf("Marquee", module)
     "move",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Marquee>😀 😎 👍 💯</Marquee>)
   )
   .add(
     "right",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Marquee direction="right">😀 😎 👍 💯</Marquee>)
   )
   .add(
     "up",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Marquee height="300px" direction="up">
         😀 😎 👍 💯
@@ -51,20 +51,20 @@ storiesOf("Marquee", module)
     "alternate",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Marquee behavior="alternate">😀 😎 👍 💯</Marquee>)
   )
   .add(
     "speedy",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Marquee scrollamount={30}>😀 😎 👍 💯</Marquee>)
   )
   .add(
     "with height",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <Marquee height="26px">😀 😎 👍 💯</Marquee>)
   );

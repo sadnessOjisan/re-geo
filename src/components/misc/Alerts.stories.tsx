@@ -13,7 +13,7 @@ storiesOf("Alerts", module)
     "alert",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="alert">
         Best check yo self, you're not looking too good. Nulla vitae elit
@@ -33,7 +33,7 @@ storiesOf("Alerts", module)
     "error",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="error">
         Change a few things up and try submitting again.
@@ -44,7 +44,7 @@ storiesOf("Alerts", module)
     "success",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="success">
         Change a few things up and try submitting again.
@@ -55,7 +55,7 @@ storiesOf("Alerts", module)
     "info",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="info">
         Change a few things up and try submitting again.
