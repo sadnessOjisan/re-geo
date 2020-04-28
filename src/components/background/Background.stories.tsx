@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { storiesOf, setAddon } from "@storybook/react";
+import { storiesOf } from "@storybook/react";
 import Background from "./Background";
 import { withInfo } from "@storybook/addon-info";
 

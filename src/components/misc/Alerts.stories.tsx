@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import Alerts from "./Alerts";
 
-const text = `  
+const text = `
 ### what
 blink tag.
 `;
@@ -16,16 +16,16 @@ storiesOf("Alerts", module)
       text: text,
     })(() => (
       <Alerts type="alert">
-        Best check yo self, you're not looking too good. Nulla vitae elit
+        Best check yo self, you&apos;re not looking too good. Nulla vitae elit
         libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque
-        nisl consectetur et.Best check yo self, you're not looking too good.
-        Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus
-        magna, vel scelerisque nisl consectetur et.Best check yo self, you're
-        not looking too good. Nulla vitae elit libero, a pharetra augue.
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.Best
-        check yo self, you're not looking too good. Nulla vitae elit libero, a
-        pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl
-        consectetur et.
+        nisl consectetur et.Best check yo self, you&apos;re not looking too
+        good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et.Best check yo self,
+        you&apos;re not looking too good. Nulla vitae elit libero, a pharetra
+        augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et.Best check yo self, you&apos;re not looking too good. Nulla vitae
+        elit libero, a pharetra augue. Praesent commodo cursus magna, vel
+        scelerisque nisl consectetur et.
       </Alerts>
     ))
   )

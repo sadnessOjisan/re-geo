@@ -57,7 +57,6 @@ class Remarquee extends React.Component<Props, State> {
       truespeed,
       hspace,
       vspace,
-      behavior,
     } = this.props;
     this.text.current.addEventListener("webkitAnimationEnd", () => {
       this.onAnimationEnd();

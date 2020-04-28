@@ -29,7 +29,7 @@ to {
 }
 `;
 
-const MoveAnimation = (props: Props) =>
+const MoveAnimation = () =>
   css`
     ${Move} 1s linear infinite reverse;
   `;

@@ -19,11 +19,11 @@ const Tabs = (props: Props) => {
   return (
     <React.Fragment>
       <TabUl className={className}>
-        {tabs.map((tab) => (
-          <TabLi>
+        {tabs.map((tab, tid) => (
+          <TabLi key={tid}>
             <Link
               isActive={selectedId === tab.id}
-              onClick={(_: React.SyntheticEvent) => onClickTab(tab.id)}
+              onClick={() => onClickTab(tab.id)}
             >
               {tab.name}
             </Link>
