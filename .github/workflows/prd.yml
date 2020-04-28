@@ -17,12 +17,9 @@ jobs:
       - name: yarn install
         run: |
           yarn install
-      - name: lint
+      - name: build
         run: |
-          yarn lint:ci
-      - name: format
-        run: |
-          yarn format:ci
+          yarn build:prd
       - name: publish
         run: |
           npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
