@@ -32,24 +32,63 @@ const Direction = {
   down: "down",
 };
 
-class Remarquee extends React.Component<Props, State> {
-  // private text = React.createRef<HTMLParagraphElement>();
-  // private wrapper = React.createRef<HTMLParagraphElement>();
+const Remarquee: React.FC<Props> = (props) => {
+  const textRef = React.useRef<HTMLParagraphElement>(null);
+  const wrapperRef = React.useRef<HTMLParagraphElement>(null);
+  const [state, setState] = React.useState<State>({
+    loopNum: -1,
+    elementHeight: null,
+    elementWidth: null,
+    animationSec: null,
+    currentMode: null,
+  });
+  const onAnimationEnd = () => {
+    const { behavior } = props;
+    const { loopNum, currentMode } = state;
+    if (behavior === "alternate") {
+      let nextMode = null;
+      switch (currentMode) {
+        case Direction.left:
+          nextMode = Direction.right;
+          break;
+        case Direction.right:
+          nextMode = Direction.left;
+          break;
+        case Direction.up:
+          nextMode = Direction.down;
+          break;
+        case Direction.down:
+          nextMode = Direction.up;
+          break;
+        default:
+          break;
+      }
+      setState({
+        ...state,
+        loopNum: state.loopNum + 1,
+        currentMode: nextMode,
+      });
+    }
+    if (loopNum > 0) {
+      setState({
+        ...state,
+        loopNum: state.loopNum - 1,
+      });
+    }
+  };
 
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      loopNum: -1,
-      elementHeight: null,
-      elementWidth: null,
-      animationSec: null,
-      currentMode: null,
-    };
-    this.text = React.createRef<HTMLParagraphElement>();
-    this.wrapper = React.createRef<HTMLParagraphElement>();
-  }
+  const {
+    loopNum,
+    animationSec,
+    elementHeight,
+    elementWidth,
+    currentMode,
+  } = state;
+  const { children, hspace, vspace, className, behavior } = props;
+  const isLoop =
+    !(behavior === "slide" || behavior === "alternate") && loopNum === -1;
 
-  componentDidMount() {
+  React.useEffect(() => {
     const {
       direction,
       scrollamount,
@@ -57,21 +96,24 @@ class Remarquee extends React.Component<Props, State> {
       truespeed,
       hspace,
       vspace,
-    } = this.props;
-    this.text.current.addEventListener("webkitAnimationEnd", () => {
-      this.onAnimationEnd();
+    } = props;
+    // 初期化されていなければ例外投げる
+    if (!textRef.current || !wrapperRef.current || !scrolldelay)
+      throw new Error();
+    textRef.current.addEventListener("webkitAnimationEnd", () => {
+      onAnimationEnd();
     });
-    this.text.current.addEventListener("AnimationEnd", () => {
-      this.onAnimationEnd();
+    textRef.current.addEventListener("AnimationEnd", () => {
+      onAnimationEnd();
     });
-    this.text.current.addEventListener("animationend", () => {
-      this.onAnimationEnd();
+    textRef.current.addEventListener("animationend", () => {
+      onAnimationEnd();
     });
-    this.text.current.addEventListener("oAnimationEnd", () => {
-      this.onAnimationEnd();
+    textRef.current.addEventListener("oAnimationEnd", () => {
+      onAnimationEnd();
     });
-    const wrapperWidth = this.wrapper.current.clientWidth;
-    const wrapperHeight = this.wrapper.current.clientHeight;
+    const wrapperWidth = wrapperRef.current.clientWidth;
+    const wrapperHeight = wrapperRef.current.clientHeight;
     let animationSec: number;
     if (direction === Direction.up || direction === Direction.down) {
       if (truespeed === "true") {
@@ -102,92 +144,69 @@ class Remarquee extends React.Component<Props, State> {
           1000;
       }
     }
-    this.setState({
-      elementHeight: this.text.current.clientHeight,
-      elementWidth: this.text.current.clientWidth,
-      animationSec: animationSec,
+    setState({
+      ...state,
+      elementHeight: textRef ? textRef.current.clientHeight : 0,
+      elementWidth: textRef.current.clientWidth,
+      // @ts-ignore
+      animationSec,
       currentMode: direction || Direction.left,
     });
-  }
+  }, []);
 
-  onAnimationEnd() {
-    const { behavior } = this.props;
-    const { loopNum, currentMode } = this.state;
-    if (behavior === "alternate") {
-      let nextMode;
-      switch (currentMode) {
-        case Direction.left:
-          nextMode = Direction.right;
-          break;
-        case Direction.right:
-          nextMode = Direction.left;
-          break;
-        case Direction.up:
-          nextMode = Direction.down;
-          break;
-        case Direction.down:
-          nextMode = Direction.up;
-          break;
-        default:
-          break;
-      }
-      this.setState({
-        loopNum: this.state.loopNum + 1,
-        currentMode: nextMode,
-      });
-    }
-    if (loopNum > 0) {
-      this.setState({
-        loopNum: this.state.loopNum - 1,
-      });
-    }
-  }
+  return (
+    // @ts-ignore
+    <Wrapper {...props} ref={wrapperRef} className={className}>
+      {/*
+      // @ts-ignore */}
+      <LeftBlock
+        vspace={vspace}
+        hspace={hspace}
+        elementWidth={elementWidth}
+        elementHeight={elementHeight}
+      />
+      {/*
+      // @ts-ignore */}
+      <Text
+        ref={textRef}
+        isLoop={isLoop}
+        loopNum={loopNum}
+        direction={currentMode}
+        animationSec={animationSec}
+        hspace={hspace || 0}
+        vspace={vspace || 0}
+        elementWidth={elementWidth}
+        elementHeight={elementHeight}
+        behavior={behavior}
+      >
+        {children}
+      </Text>
+      {/*
+      // @ts-ignore */}
+      <RightBlock
+        vspace={vspace}
+        hspace={hspace}
+        elementWidth={elementWidth}
+        elementHeight={elementHeight}
+      />
+    </Wrapper>
+  );
+};
 
-  render() {
-    const {
-      loopNum,
-      animationSec,
-      elementHeight,
-      elementWidth,
-      currentMode,
-    } = this.state;
-    const { children, hspace, vspace, className, behavior } = this.props;
-    const isLoop =
-      !(behavior === "slide" || behavior === "alternate") && loopNum === -1;
-    return (
-      <Wrapper {...this.props} ref={this.wrapper} className={className}>
-        <LeftBlock
-          vspace={vspace}
-          hspace={hspace}
-          elementWidth={elementWidth}
-          elementHeight={elementHeight}
-        />
-        <Text
-          ref={this.text}
-          isLoop={isLoop}
-          loopNum={loopNum}
-          direction={currentMode}
-          animationSec={animationSec}
-          hspace={hspace || 0}
-          vspace={vspace || 0}
-          elementWidth={elementWidth}
-          elementHeight={elementHeight}
-          behavior={behavior}
-        >
-          {children}
-        </Text>
-        <RightBlock
-          vspace={vspace}
-          hspace={hspace}
-          elementWidth={elementWidth}
-          elementHeight={elementHeight}
-        />
-      </Wrapper>
-    );
-  }
-}
+type Purify<T extends string | number | symbol> = { [P in T]: P }[T];
 
-const Left = (props) => keyframes`
+export type MyRequired<T> = T extends object
+  ? { [P in Purify<keyof T>]: NonNullable<T[P]> }
+  : T;
+
+type AnimationType = MyRequired<
+  Pick<
+    Props & State,
+    "behavior" | "elementWidth" | "hspace" | "vspace" | "elementHeight"
+  >
+>;
+
+const Left = (props: AnimationType) => keyframes`
   0% { left: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? `calc(100% - ${props.elementWidth}px)`
@@ -200,7 +219,7 @@ const Left = (props) => keyframes`
   }px; transform: translate(-100%); }
 `;
 
-const Right = (props) => keyframes`
+const Right = (props: AnimationType) => keyframes`
   0% { left: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? props.elementWidth
@@ -210,10 +229,10 @@ const Right = (props) => keyframes`
     props.behavior === "slide" || props.behavior === "alternate"
       ? `calc(100% - ${props.elementWidth}`
       : `calc(100% - ${props.hspace}`
-  }px); transform: translate(0); }
+  }px); transform: translate(0);
 `;
 
-const Up = (props) => keyframes`
+const Up = (props: AnimationType) => keyframes`
   0% { top: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? `calc(100% + ${-props.elementHeight}px - ${props.vspace || 0}px)`
@@ -226,7 +245,7 @@ const Up = (props) => keyframes`
   }; transform: translate(0,-100%); }
 `;
 
-const Down = (props) => keyframes`
+const Down = (props: AnimationType) => keyframes`
 0% { top: ${
   props.behavior === "slide" || props.behavior === "alternate"
     ? props.elementHeight
@@ -237,7 +256,11 @@ const Down = (props) => keyframes`
 }px); transform: translate(0,0); }
 `;
 
-const Wrapper = styled.div`
+type WrapperType = MyRequired<
+  Pick<Props & State, "bgcolor" | "width" | "height" | "direction">
+>;
+
+const Wrapper = styled.div<WrapperType>`
   position: relative;
   background-color: ${(props) => props.bgcolor};
   width: ${(props) => (props.width ? props.width : "100%")};
@@ -249,7 +272,11 @@ const Wrapper = styled.div`
     (props.direction === "up" || props.direction === "down") && "column"};
 `;
 
-const LeftBlock = styled.div`
+type BlockType = MyRequired<
+  Pick<Props & State, "hspace" | "vspace" | "elementHeight" | "elementWidth">
+>;
+
+const LeftBlock = styled.div<BlockType>`
   width: ${(props) =>
     props.hspace ? `${props.hspace + props.elementWidth}px` : "0px"};
   height: ${(props) =>
@@ -262,7 +289,7 @@ const LeftBlock = styled.div`
   z-index: 3;
 `;
 
-const RightBlock = styled.div`
+const RightBlock = styled.div<BlockType>`
   width: ${(props) =>
     props.hspace ? `${props.hspace + props.elementWidth}px` : "0px"};
   height: ${(props) =>
@@ -274,7 +301,14 @@ const RightBlock = styled.div`
   z-index: 3;
 `;
 
-const Text = styled.p`
+type TextType = MyRequired<
+  Pick<
+    Props & State & { isLoop: boolean },
+    "direction" | "animationSec" | "behavior" | "loopNum" | "isLoop"
+  >
+>;
+
+const Text = styled.p<TextType & AnimationType>`
   z-index: 1;
   position: absolute;
   animation: ${(props) => {
