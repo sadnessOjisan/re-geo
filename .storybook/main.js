@@ -1,4 +1,9 @@
 module.exports = {
+  // これ入れないとフッター出ない
+  addons: [
+    "@storybook/addon-knobs/register",
+    "@storybook/addon-actions/register",
+  ],
   stories: ["../**/*.stories.tsx"],
   webpackFinal: async (config) => {
     config.module.rules.push({
