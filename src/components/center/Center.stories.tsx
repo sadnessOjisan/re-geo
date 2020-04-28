@@ -24,7 +24,7 @@ storiesOf("Center", module)
     "v_h center",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Wrapper>
         <Center vertical horizontal>
@@ -37,7 +37,7 @@ storiesOf("Center", module)
     "h center",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Wrapper>
         <Center horizontal>😀 😎 👍 💯</Center>
@@ -48,7 +48,7 @@ storiesOf("Center", module)
     "v center",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Wrapper>
         <Center vertical>😀 😎 👍 💯</Center>

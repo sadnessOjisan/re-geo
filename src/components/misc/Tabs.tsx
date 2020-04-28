@@ -19,11 +19,11 @@ const Tabs = (props: Props) => {
   return (
     <React.Fragment>
       <TabUl className={className}>
-        {tabs.map(tab => (
-          <TabLi>
+        {tabs.map((tab, tid) => (
+          <TabLi key={tid}>
             <Link
               isActive={selectedId === tab.id}
-              onClick={(_: React.SyntheticEvent) => onClickTab(tab.id)}
+              onClick={() => onClickTab(tab.id)}
             >
               {tab.name}
             </Link>
@@ -33,7 +33,7 @@ const Tabs = (props: Props) => {
       <Tabbable>
         <TabContent>
           <TabPane>
-            {tabs.filter(tab => tab.id === selectedId)[0].content}
+            {tabs.filter((tab) => tab.id === selectedId)[0].content}
           </TabPane>
         </TabContent>
       </Tabbable>

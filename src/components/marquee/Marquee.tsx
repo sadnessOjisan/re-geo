@@ -29,7 +29,7 @@ const Direction = {
   left: "left",
   right: "right",
   up: "up",
-  down: "down"
+  down: "down",
 };
 
 class Remarquee extends React.Component<Props, State> {
@@ -43,7 +43,7 @@ class Remarquee extends React.Component<Props, State> {
       elementHeight: null,
       elementWidth: null,
       animationSec: null,
-      currentMode: null
+      currentMode: null,
     };
     this.text = React.createRef<HTMLParagraphElement>();
     this.wrapper = React.createRef<HTMLParagraphElement>();
@@ -57,7 +57,6 @@ class Remarquee extends React.Component<Props, State> {
       truespeed,
       hspace,
       vspace,
-      behavior
     } = this.props;
     this.text.current.addEventListener("webkitAnimationEnd", () => {
       this.onAnimationEnd();
@@ -107,7 +106,7 @@ class Remarquee extends React.Component<Props, State> {
       elementHeight: this.text.current.clientHeight,
       elementWidth: this.text.current.clientWidth,
       animationSec: animationSec,
-      currentMode: direction || Direction.left
+      currentMode: direction || Direction.left,
     });
   }
 
@@ -134,12 +133,12 @@ class Remarquee extends React.Component<Props, State> {
       }
       this.setState({
         loopNum: this.state.loopNum + 1,
-        currentMode: nextMode
+        currentMode: nextMode,
       });
     }
     if (loopNum > 0) {
       this.setState({
-        loopNum: this.state.loopNum - 1
+        loopNum: this.state.loopNum - 1,
       });
     }
   }
@@ -150,7 +149,7 @@ class Remarquee extends React.Component<Props, State> {
       animationSec,
       elementHeight,
       elementWidth,
-      currentMode
+      currentMode,
     } = this.state;
     const { children, hspace, vspace, className, behavior } = this.props;
     const isLoop =
@@ -188,7 +187,7 @@ class Remarquee extends React.Component<Props, State> {
   }
 }
 
-const Left = props => keyframes`
+const Left = (props) => keyframes`
   0% { left: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? `calc(100% - ${props.elementWidth}px)`
@@ -201,7 +200,7 @@ const Left = props => keyframes`
   }px; transform: translate(-100%); }
 `;
 
-const Right = props => keyframes`
+const Right = (props) => keyframes`
   0% { left: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? props.elementWidth
@@ -214,7 +213,7 @@ const Right = props => keyframes`
   }px); transform: translate(0); }
 `;
 
-const Up = props => keyframes`
+const Up = (props) => keyframes`
   0% { top: ${
     props.behavior === "slide" || props.behavior === "alternate"
       ? `calc(100% + ${-props.elementHeight}px - ${props.vspace || 0}px)`
@@ -227,49 +226,50 @@ const Up = props => keyframes`
   }; transform: translate(0,-100%); }
 `;
 
-const Down = props => keyframes`
+const Down = (props) => keyframes`
 0% { top: ${
   props.behavior === "slide" || props.behavior === "alternate"
     ? props.elementHeight
     : 0 - props.elementHeight
 }px; transform: translate(0,-100%); }
-100% { top: calc(100% - ${props.vspace ||
-  0 + props.elementHeight}px); transform: translate(0,0); }
+100% { top: calc(100% - ${
+  props.vspace || 0 + props.elementHeight
+}px); transform: translate(0,0); }
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  background-color: ${props => props.bgcolor};
-  width: ${props => (props.width ? props.width : "100%")};
-  height: ${props => (props.height ? props.height : "16px")};
+  background-color: ${(props) => props.bgcolor};
+  width: ${(props) => (props.width ? props.width : "100%")};
+  height: ${(props) => (props.height ? props.height : "16px")};
   overflow: hidden;
   display: flex;
   align-items: center;
-  flex-direction: ${props =>
+  flex-direction: ${(props) =>
     (props.direction === "up" || props.direction === "down") && "column"};
 `;
 
 const LeftBlock = styled.div`
-  width: ${props =>
+  width: ${(props) =>
     props.hspace ? `${props.hspace + props.elementWidth}px` : "0px"};
-  height: ${props =>
+  height: ${(props) =>
     props.vspace ? `${props.vspace - props.elementHeight}px` : "0px"};
   background-color: white;
   position: absolute;
-  left: ${props => props.hspace - props.elementWidth}px;
-  top: calc(${props => props.vspace}px);
+  left: ${(props) => props.hspace - props.elementWidth}px;
+  top: calc(${(props) => props.vspace}px);
   background-color: white;
   z-index: 3;
 `;
 
 const RightBlock = styled.div`
-  width: ${props =>
+  width: ${(props) =>
     props.hspace ? `${props.hspace + props.elementWidth}px` : "0px"};
-  height: ${props =>
+  height: ${(props) =>
     props.vspace ? `${props.vspace + props.elementHeight}px` : "0px"};
   position: absolute;
-  left: calc(100% - ${props => props.hspace}px);
-  top: calc(100% - ${props => props.vspace}px);
+  left: calc(100% - ${(props) => props.hspace}px);
+  top: calc(100% - ${(props) => props.vspace}px);
   background-color: white;
   z-index: 3;
 `;
@@ -277,7 +277,7 @@ const RightBlock = styled.div`
 const Text = styled.p`
   z-index: 1;
   position: absolute;
-  animation: ${props => {
+  animation: ${(props) => {
       switch (props.direction) {
         case Direction.left:
           return Left(props);
@@ -291,8 +291,8 @@ const Text = styled.p`
           return Left(props);
       }
     }}
-    ${props => props.animationSec}s linear;
-  animation-iteration-count: ${props =>
+    ${(props) => props.animationSec}s linear;
+  animation-iteration-count: ${(props) =>
     props.isLoop
       ? "infinite"
       : props.behavior === "slide" || props.behavior === "alternate"

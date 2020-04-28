@@ -13,16 +13,18 @@ const Table = (props: Props) => {
     <STable>
       <Thead>
         <Tr>
-          {headers.map(header => (
-            <Th>{header}</Th>
+          {headers.map((header, idx) => (
+            <Th key={idx}>{header}</Th>
           ))}
         </Tr>
       </Thead>
       <Tbody>
         {rows.map((row, ridx) => (
-          <Tr>
-            {row.map(d => (
-              <Td ridx={ridx}>{d}</Td>
+          <Tr key={ridx}>
+            {row.map((d, rridx) => (
+              <Td ridx={ridx} key={rridx}>
+                {d}
+              </Td>
             ))}
           </Tr>
         ))}

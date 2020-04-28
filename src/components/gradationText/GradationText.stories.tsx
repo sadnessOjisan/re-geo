@@ -16,7 +16,7 @@ storiesOf("GradationText", module)
     "GradationText",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <GradationText colorArray={["red", "blue", "green"]}>
         Hello GradationText
@@ -27,7 +27,7 @@ storiesOf("GradationText", module)
     "GradationText animation",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <GradationText colorArray={["red", "blue", "green"]} isAnimate={true}>
         Hello GradationText
@@ -38,7 +38,7 @@ storiesOf("GradationText", module)
     "GradationText animation　large",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <GradationText
         colorArray={["red", "blue", "green"]}

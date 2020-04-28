@@ -12,11 +12,14 @@ storiesOf("Table", module).add(
   "alert",
   withInfo({
     inline: true,
-    text: text
+    text: text,
   })(() => (
     <Table
       headers={["aaa", "bbb", "ccc"]}
-      rows={[["111", "222", "333"], ["fff", "ggg", "hhh"]]}
+      rows={[
+        ["111", "222", "333"],
+        ["fff", "ggg", "hhh"],
+      ]}
     />
   ))
 );

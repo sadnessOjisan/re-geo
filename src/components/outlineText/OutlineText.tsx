@@ -17,7 +17,7 @@ const OutlineText = (props: Props) => {
     size,
     inlineColor,
     outlineColor,
-    strokeWidth
+    strokeWidth,
   } = props;
   return (
     <StyledText

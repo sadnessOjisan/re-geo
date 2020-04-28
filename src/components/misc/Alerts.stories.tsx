@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import Alerts from "./Alerts";
 
-const text = `  
+const text = `
 ### what
 blink tag.
 `;
@@ -13,19 +13,19 @@ storiesOf("Alerts", module)
     "alert",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="alert">
-        Best check yo self, you're not looking too good. Nulla vitae elit
+        Best check yo self, you&apos;re not looking too good. Nulla vitae elit
         libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque
-        nisl consectetur et.Best check yo self, you're not looking too good.
-        Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus
-        magna, vel scelerisque nisl consectetur et.Best check yo self, you're
-        not looking too good. Nulla vitae elit libero, a pharetra augue.
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.Best
-        check yo self, you're not looking too good. Nulla vitae elit libero, a
-        pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl
-        consectetur et.
+        nisl consectetur et.Best check yo self, you&apos;re not looking too
+        good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus
+        magna, vel scelerisque nisl consectetur et.Best check yo self,
+        you&apos;re not looking too good. Nulla vitae elit libero, a pharetra
+        augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur
+        et.Best check yo self, you&apos;re not looking too good. Nulla vitae
+        elit libero, a pharetra augue. Praesent commodo cursus magna, vel
+        scelerisque nisl consectetur et.
       </Alerts>
     ))
   )
@@ -33,7 +33,7 @@ storiesOf("Alerts", module)
     "error",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="error">
         Change a few things up and try submitting again.
@@ -44,7 +44,7 @@ storiesOf("Alerts", module)
     "success",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="success">
         Change a few things up and try submitting again.
@@ -55,7 +55,7 @@ storiesOf("Alerts", module)
     "info",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => (
       <Alerts type="info">
         Change a few things up and try submitting again.

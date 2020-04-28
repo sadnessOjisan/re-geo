@@ -19,55 +19,55 @@ storiesOf("Text", module)
     "h1",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H1>heyyhey</H1>)
   )
   .add(
     "h2",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H2>heyyhey</H2>)
   )
   .add(
     "h3",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H3>heyyhey</H3>)
   )
   .add(
     "h4",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H4>heyyhey</H4>)
   )
   .add(
     "h5",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H5>heyyhey</H5>)
   )
   .add(
     "h6",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <H6>heyyhey</H6>)
   )
   .add(
     "p",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <P>heyyhey</P>)
   )
   .add(
     "color",
     withInfo({
       inline: true,
-      text: text
+      text: text,
     })(() => <P color="red">heyyhey</P>)
   );
