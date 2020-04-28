@@ -1,10 +1,9 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
 import Button from "./Button";
 import ButtonGroup from "./ButtonGroup";
 import { withInfo } from "@storybook/addon-info";
-import { action, actions, withActions } from "@storybook/addon-actions";
-
+import { action } from "@storybook/addon-actions";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 const text = `  
   ### what
   Button tag.
@@ -19,6 +18,9 @@ export default {
   parameters: {
     info: {
       inline: true,
+    },
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
     },
   },
   decorators: [withInfo],
