@@ -24,8 +24,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint --fix './src/**/*.{ts,tsx}'",
-    "format": "prettier --write './src/**/*.{ts,tsx}'",
+    "format": "prettier --write '**/*.{js,jsx,json,md}'",
+    "format:ci": "yarn prettier './src/**/*.{ts,tsx,js,jsx,json,md}' -- --check",
+    "lint": "eslint --fix 'src/**/*.{js,jsx,json}'",
+    "lint:ci": "eslint 'src/**/*.{js,jsx,json}'",
     "tc": "tsc -p . --noEmit",
     "build:local": "BUILD_MODE='development' REACT_APP_ENV=local webpack",
     "build:dev": "BUILD_MODE='development' REACT_APP_ENV=development webpack",
