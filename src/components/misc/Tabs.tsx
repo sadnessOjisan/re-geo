@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-interface ITab {
+interface Tab {
   id: string;
   name: string;
   content: React.ReactNode;
@@ -10,7 +10,7 @@ interface ITab {
 interface Props {
   selectedId: string;
   className?: string;
-  tabs: ITab[];
+  tabs: Tab[];
   onClickTab?: any;
 }
 
