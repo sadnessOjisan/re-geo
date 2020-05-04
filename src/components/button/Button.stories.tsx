@@ -1,16 +1,8 @@
 import * as React from "react";
 import Button from "./Button";
-import ButtonGroup from "./ButtonGroup";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-const text = `  
-  ### what
-  Button tag.
-
-  ### Source
-  [here](https://github.com/sadnessOjisan/re-geo/blob/master/src/components/button/Button.tsx)
-`;
 
 export default {
   title: "Button",
