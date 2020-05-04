@@ -13,12 +13,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|ts|tsx)$/,
+        test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: "babel-loader",
+            loader: "ts-loader",
           },
         ],
+        exclude: /.stories.tsx/,
       },
       {
         test: /\.css/,

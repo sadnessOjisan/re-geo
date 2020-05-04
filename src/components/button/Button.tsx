@@ -15,16 +15,18 @@ interface Props {
     | "inverse";
   size?: "normal" | "large" | "small";
   isDisable?: boolean;
+  onClick?: () => void;
 }
 
 const Button = (props: Props) => {
-  const { className, children, type, size, isDisable } = props;
+  const { className, children, type, size, isDisable, onClick } = props;
   return (
     <SButton
       className={className}
       type={type}
       size={size}
       isDisable={isDisable}
+      onClick={onClick}
     >
       {children}
     </SButton>
