@@ -7,12 +7,12 @@ module.exports = ({ config }) => {
     include: path.resolve(__dirname, "../src"),
     use: [
       require.resolve("babel-loader"),
-      require.resolve("react-docgen-typescript-loader")
-    ]
+      require.resolve("react-docgen-typescript-loader"),
+    ],
   });
   config.module.rules.push({
     test: /\.(png|jpg|gif)$/,
-    loader: "url-loader"
+    loader: "url-loader",
   });
   config.resolve.extensions.push(".ts", ".tsx", ".gif", ".css", "jpg", "png");
 
