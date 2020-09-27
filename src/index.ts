@@ -1,4 +1,3 @@
-import "./util/reset.css";
 import Button from "./components/button/Button";
 import H1 from "./components/text/H1";
 import H2 from "./components/text/H2";
