@@ -1,42 +1,39 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  className?: string;
+interface PassedProps {
   children: React.ReactNode;
-  size: number;
   inlineColor: string;
   outlineColor: string;
   strokeWidth: number;
 }
 
-const OutlineText = (props: Props) => {
-  const {
-    className,
-    children,
-    size,
-    inlineColor,
-    outlineColor,
-    strokeWidth,
-  } = props;
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component = (props: Props) => {
+  const { className, children } = props;
+  return <span className={className}>{children}</span>;
+};
+
+const StyledComponent = styled(Component)`
+  color: ${(props: Props) => props.inlineColor};
+  -webkit-text-stroke-color: ${(props: Props) => props.outlineColor};
+  -webkit-text-stroke-width: ${(props: Props) => props.strokeWidth}px;
+`;
+
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { children, inlineColor, outlineColor, strokeWidth } = props;
   return (
-    <StyledText
-      size={size}
-      className={className}
+    <StyledComponent
       strokeWidth={strokeWidth}
       inlineColor={inlineColor}
       outlineColor={outlineColor}
     >
       {children}
-    </StyledText>
+    </StyledComponent>
   );
 };
 
-const StyledText = styled.span<Props>`
-  color: ${(props: Props) => props.inlineColor};
-  font-size: ${(props: Props) => props.size}px;
-  -webkit-text-stroke-color: ${(props: Props) => props.outlineColor};
-  -webkit-text-stroke-width: ${(props: Props) => props.strokeWidth}px;
-`;
-
-export default OutlineText;
+export const OutlineText = ContainerComponent;
