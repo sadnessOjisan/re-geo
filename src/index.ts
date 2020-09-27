@@ -9,7 +9,7 @@ import Badge from "./components/misc/Badge";
 import Pager from "./components/misc/Pager";
 import ProgressBar from "./components/misc/ProgressBar";
 import Tabs from "./components/misc/Tabs";
-import Image from "./img";
+import Image from "./img/index";
 import Background from "./components/background/Background";
 import Font from "./components/font/Font";
 import GradationText from "./components/gradationText/GradationText";
