@@ -30,7 +30,8 @@ export default function App() {
 ---
 
 - [ ] typography に font 読み込む
-- [ ]
+- [ ] 互換 marquee は remarquee から持ってくる（つまり作り直す）
+- [ ] font tag
 
 ## special thanks
 

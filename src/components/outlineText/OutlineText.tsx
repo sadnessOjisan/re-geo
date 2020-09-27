@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 interface PassedProps {
-  children: React.ReactNode;
   inlineColor: string;
   outlineColor: string;
   strokeWidth: number;
@@ -12,7 +11,7 @@ interface Props extends PassedProps {
   className?: string;
 }
 
-const Component = (props: Props) => {
+const Component: React.FC<Props> = (props) => {
   const { className, children } = props;
   return <span className={className}>{children}</span>;
 };

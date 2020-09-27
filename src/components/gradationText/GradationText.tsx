@@ -1,26 +1,19 @@
 import * as React from "react";
 import styled, { keyframes, css } from "styled-components";
 
-interface Props {
-  className?: string;
-  children: React.ReactNode;
+interface PassedProps {
   colorArray: string[];
   isAnimate?: boolean;
   fontSize?: number;
 }
 
-const GradationText = (props: Props) => {
-  const { className, children, colorArray, isAnimate, fontSize } = props;
-  return (
-    <StyledText
-      className={className}
-      colorArray={colorArray}
-      isAnimate={isAnimate}
-      fontSize={fontSize}
-    >
-      {children}
-    </StyledText>
-  );
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <span className={className}>{children}</span>;
 };
 
 const Move = keyframes`
@@ -34,7 +27,7 @@ const MoveAnimation = () =>
     ${Move} 1s linear infinite reverse;
   `;
 
-const StyledText = styled.span<Props>`
+const StyledComponent = styled(Component)<Props>`
   background: -webkit-linear-gradient(
     0deg,
     ${(props: Props) => props.colorArray[0]},
@@ -48,4 +41,17 @@ const StyledText = styled.span<Props>`
   animation: ${(props: Props) => props.isAnimate && MoveAnimation};
 `;
 
-export default GradationText;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { colorArray, isAnimate, fontSize, children } = props;
+  return (
+    <StyledComponent
+      colorArray={colorArray}
+      isAnimate={isAnimate}
+      fontSize={fontSize}
+    >
+      {children}
+    </StyledComponent>
+  );
+};
+
+export const GradationText = ContainerComponent;
