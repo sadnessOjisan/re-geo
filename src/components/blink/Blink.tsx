@@ -1,19 +1,17 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
 
-interface Props {
-  className?: string;
-  children: React.ReactNode;
+interface PassedProps {
   speed?: number;
 }
 
-const Blink = (props: Props) => {
-  const { className, children, speed } = props;
-  return (
-    <Wrapper className={className} speed={speed}>
-      {children}
-    </Wrapper>
-  );
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <div className={className}>{children}</div>;
 };
 
 const Blinker = keyframes`
@@ -26,9 +24,14 @@ const Blinker = keyframes`
   }
 `;
 
-const Wrapper = styled.div<Props>`
+const StyledComponent = styled(Component)<Props>`
   animation: ${Blinker} ${(props: Props) => (props.speed ? props.speed : 0.15)}s
     step-end infinite;
 `;
 
-export default Blink;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { children, speed } = props;
+  return <StyledComponent speed={speed}>{children}</StyledComponent>;
+};
+
+export const Blink = ContainerComponent;

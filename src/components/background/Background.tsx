@@ -2,22 +2,20 @@ import * as React from "react";
 import styled from "styled-components";
 import Image from "../../img/index";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface PassedProps {
   pattern: "stars" | "microfab" | "rainbow";
 }
 
-const BackGround = (props: Props) => {
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component: React.FC<Props> = (props) => {
   const { children, pattern, className } = props;
-  return (
-    <SBackGround pattern={pattern} className={className}>
-      {children}
-    </SBackGround>
-  );
+  return <div className={className}>{children}</div>;
 };
 
-const SBackGround = styled.div<Props>`
+const StyledComponent = styled(Component)<Props>`
   width: 100%;
   height: 100%;
   background: ${(props: Props) => {
@@ -35,4 +33,9 @@ const SBackGround = styled.div<Props>`
   }};
 `;
 
-export default BackGround;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { pattern, children } = props;
+  return <StyledComponent pattern={pattern}>{children}</StyledComponent>;
+};
+
+export const BackGround = ContainerComponent;
