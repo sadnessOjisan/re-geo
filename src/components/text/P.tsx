@@ -3,25 +3,19 @@ import styled from "styled-components";
 
 interface Props {
   children: React.ReactNode;
-  color?: string;
-  fontSize?: number;
   className?: string;
 }
 
-const P = (props: Props) => {
-  const { children, color, fontSize, className } = props;
-  return (
-    <StyledP color={color} fontSize={fontSize} className={className}>
-      {children}
-    </StyledP>
-  );
+const Component = (props: Props) => {
+  const { children, className } = props;
+  return <p className={className}>{children}</p>;
 };
 
-const StyledP = styled.p<Props>`
+const StyledComponent = styled.p<Props>`
   display: block;
-  font-size: ${(props: Props) => (props.fontSize ? props.fontSize : "16px")};
   line-height: 20px;
-  color: ${(props: Props) => (props.color ? props.color : "#ff0")};
+  color: #ff0;
+  font-size: 16px;
 `;
 
-export default P;
+export const P = StyledComponent;

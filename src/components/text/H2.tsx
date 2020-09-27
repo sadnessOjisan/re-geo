@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-const H2 = (props: Props) => {
+const Component = (props: Props) => {
   const { children, className } = props;
-  return <StyledH2 className={className}>{children}</StyledH2>;
+  return <h2 className={className}>{children}</h2>;
 };
 
-const StyledH2 = styled.h2`
+const StyledComponent = styled(Component)`
   color: #ffcc00;
   font-size: 36px;
   line-height: 40px;
@@ -21,4 +21,4 @@ const StyledH2 = styled.h2`
   display: block;
 `;
 
-export default H2;
+export const H2 = StyledComponent;
