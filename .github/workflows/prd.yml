@@ -1,32 +1,27 @@
-name: release
-
+name: publish
 on:
   push:
     tags:
       - "v*"
-
 jobs:
-  build:
+  release:
+    name: check version, add tag and release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: yarn install
-        run: |
-          yarn install
-      - name: yarn lint
-        run: |
-          yarn lint:ci
+          registry-url: "https://registry.npmjs.org"
+      - name: install
+        run: npm install
+      - name: Can Publish
+        run: npx can-npm-publish --verbose
       - name: build
-        run: |
-          yarn build:prd
-      - name: publish
-        run: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          npm publish
+        run: npm run build
+      - name: release
+        run: npm publish
         env:
-          CI: true
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
