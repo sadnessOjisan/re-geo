@@ -1,7 +1,8 @@
 {
   "name": "re-geo",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "main": "dist/regeo.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/sadnessOjisan/re-geo.git",
   "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
   "license": "MIT",
