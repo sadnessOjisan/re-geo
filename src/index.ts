@@ -1,4 +1,3 @@
-import "./util/reset.css";
 import Button from "./components/button/Button";
 import H1 from "./components/text/H1";
 import H2 from "./components/text/H2";
@@ -10,7 +9,7 @@ import Badge from "./components/misc/Badge";
 import Pager from "./components/misc/Pager";
 import ProgressBar from "./components/misc/ProgressBar";
 import Tabs from "./components/misc/Tabs";
-import Image from "./img";
+import Image from "./img/index";
 import Background from "./components/background/Background";
 import Font from "./components/font/Font";
 import GradationText from "./components/gradationText/GradationText";
