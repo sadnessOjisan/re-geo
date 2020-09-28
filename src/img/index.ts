@@ -31,7 +31,7 @@ import Noframes from "./noframes.gif";
 import Notepad from "./notepad.gif";
 import NSLogo from "./ns_logo.gif";
 import Progress from "./progress.gif";
-import Rrainbow from "./rainbow.gif";
+import Rainbow from "./rainbow.gif";
 import SignIn from "./sign-in.gif";
 import Spinningearth from "./spinningearth.gif";
 import Stars from "./stars.gif";
@@ -40,7 +40,7 @@ import Wabwalk from "./wabwalk.gif";
 import Webtrips from "./webtrips.gif";
 import Yahooweek from "./yahooweek.gif";
 
-export default {
+export {
   SevenUpspot,
   Americanflag,
   Community,
@@ -74,7 +74,7 @@ export default {
   Notepad,
   NSLogo,
   Progress,
-  Rrainbow,
+  Rainbow,
   SignIn,
   Spinningearth,
   Stars,

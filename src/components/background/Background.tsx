@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Image from "../../img/index";
+import { Stars, Microfab, Rainbow } from "../../img/index";
 
 interface PassedProps {
   pattern: "stars" | "microfab" | "rainbow";
@@ -21,11 +21,11 @@ const StyledComponent = styled(Component)<Props>`
   background: ${(props: Props) => {
     switch (props.pattern) {
       case "stars":
-        return `#000 url(${Image.Stars}) top left`;
+        return `#000 url(${Stars}) top left`;
       case "microfab":
-        return `#000 url(${Image.Microfab}) top left`;
+        return `#000 url(${Microfab}) top left`;
       case "rainbow":
-        return `#000 url(${Image.Rrainbow}) top left`;
+        return `#000 url(${Rainbow}) top left`;
       default:
         return "#000";
     }
