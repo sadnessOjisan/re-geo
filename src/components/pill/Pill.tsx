@@ -11,7 +11,7 @@ interface Props extends PassedProps {
 }
 
 const Component: React.FC<Props> = (props) => {
-  const { isActive, children, className, isDisable } = props;
+  const { children, className } = props;
   return (
     <li className={className}>
       <a>{children}</a>
@@ -19,6 +19,7 @@ const Component: React.FC<Props> = (props) => {
   );
 };
 
+// TODO: li のアイテムスタイルを消す
 const StyledComponent = styled(Component)<PassedProps>`
   line-height: 20px;
   display: list-item;

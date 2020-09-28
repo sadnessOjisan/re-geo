@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+// TODO: change color
 interface PassedProps {
   type?: "disabled";
 }
