@@ -6,18 +6,18 @@ interface Props {
   className?: string;
 }
 
-const H1 = (props: Props) => {
+const Component = (props: Props) => {
   const { children, className } = props;
-  return <StyledH1 className={className}>{children}</StyledH1>;
+  return <h4 className={className}>{children}</h4>;
 };
 
-const StyledH1 = styled.h1`
-  color: #f00;
-  font-size: 44px;
+const StyledComponent = styled(Component)`
+  color: #6f0;
+  font-size: 20px;
   line-height: 40px;
   font-weight: bold;
+  line-height: 20px;
   text-rendering: optimizelegibility;
   display: block;
 `;
-
-export default H1;
+export const H4 = StyledComponent;

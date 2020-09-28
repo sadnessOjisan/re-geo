@@ -1,39 +1,40 @@
 import * as React from "react";
 import styled from "styled-components";
 
-interface Props {
-  className?: string;
+interface PassedProps {
   headers: React.ReactNode[];
   rows: React.ReactNode[][];
 }
 
-const Table = (props: Props) => {
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component = (props: Props) => {
   const { headers, rows } = props;
   return (
-    <STable>
-      <Thead>
-        <Tr>
+    <table>
+      <thead>
+        <tr>
           {headers.map((header, idx) => (
-            <Th key={idx}>{header}</Th>
+            <th key={idx}>{header}</th>
           ))}
-        </Tr>
-      </Thead>
-      <Tbody>
+        </tr>
+      </thead>
+      <tbody>
         {rows.map((row, ridx) => (
-          <Tr key={ridx}>
+          <tr key={ridx}>
             {row.map((d, rridx) => (
-              <Td ridx={ridx} key={rridx}>
-                {d}
-              </Td>
+              <td key={rridx}>{d}</td>
             ))}
-          </Tr>
+          </tr>
         ))}
-      </Tbody>
-    </STable>
+      </tbody>
+    </table>
   );
 };
 
-const STable = styled.table`
+const StyledComponent = styled(Component)`
   border: 1px solid #008000;
   border-collapse: separate;
   border-left: 0;
@@ -47,48 +48,39 @@ const STable = styled.table`
   font-size: 16px;
   line-height: 20px;
   color: #ff0;
+  & > thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+  }
+  & tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  & th {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+  }
+  & tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+  }
+  & tr td {
+    border-left: 1px solid #008000;
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #008000;
+    display: table-cell;
+  }
+  & tr:nth-child(even) td {
+    background-color: #000;
+  }
 `;
 
-const Thead = styled.thead`
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
-`;
-
-const Tr = styled.tr`
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
-`;
-
-const Th = styled.th`
-  border-top: 0;
-  vertical-align: bottom;
-  border-left: 1px solid #008000;
-  font-weight: bold;
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  display: table-cell;
-`;
-
-const Tbody = styled.tbody`
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-  border-collapse: separate;
-`;
-
-const Td = styled.td<{ ridx: number }>`
-  background-color: ${(props: { ridx: number }) =>
-    props.ridx % 2 === 0 && "#000"};
-  border-left: 1px solid #008000;
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #008000;
-  display: table-cell;
-`;
-
-export default Table;
+export const Table = StyledComponent;

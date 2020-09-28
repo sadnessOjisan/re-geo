@@ -1,31 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  className?: string;
-  children: React.ReactNode;
+interface PassedProps {
   vertical?: boolean;
   horizontal?: boolean;
 }
 
-const Center = (props: Props) => {
-  const { className, children, vertical, horizontal } = props;
-  return (
-    <Wrapper
-      className={className}
-      horizontal={horizontal === true}
-      vertical={vertical === true}
-    >
-      {children}
-    </Wrapper>
-  );
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <div className={className}>{children}</div>;
 };
 
-const Wrapper = styled.div<Props>`
+const StyledComponent = styled(Component)<PassedProps>`
   display: flex;
   height: ${(props: Props) => props.vertical && "100%"};
   align-items: ${(props: Props) => props.vertical && "center"};
   justify-content: ${(props: Props) => props.horizontal && "center"};
 `;
 
-export default Center;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { children, vertical, horizontal } = props;
+  return (
+    <StyledComponent vertical={vertical} horizontal={horizontal}>
+      {children}
+    </StyledComponent>
+  );
+};
+
+export const Center = ContainerComponent;

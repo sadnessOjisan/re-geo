@@ -26,3 +26,14 @@ export default function App() {
 - [ ] storybook
 - [ ] prettier, eslint
 - [ ] CI/CD
+
+---
+
+- [ ] typography に font 読み込む
+- [ ] 互換 marquee は remarquee から持ってくる（つまり作り直す）
+- [ ] font tag
+- [ ] tab
+
+## special thanks
+
+some component are inspired by brahbrah

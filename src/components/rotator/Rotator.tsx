@@ -3,17 +3,17 @@ import styled, { keyframes } from "styled-components";
 
 interface Props {
   className?: string;
-  children: React.ReactNode;
+}
+
+interface PassedProps {
   speed?: number;
 }
 
-const Rotator = (props: Props) => {
-  const { className, children, speed } = props;
-  return (
-    <Wrapper className={className} speed={speed}>
-      {children}
-    </Wrapper>
-  );
+type StyledProps = Pick<PassedProps, "speed">;
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <div className={className}>{children}</div>;
 };
 
 const Rotate = keyframes`
@@ -26,10 +26,15 @@ const Rotate = keyframes`
 }
 `;
 
-const Wrapper = styled.div<Props>`
-  animation: ${Rotate} ${(props: Props) => (props.speed ? props.speed : 5)}s
-    linear infinite;
+const StyledComponent = styled(Component)<StyledProps>`
+  animation: ${Rotate} ${(props) => (props.speed ? props.speed : 5)}s linear
+    infinite;
   display: inline-block;
 `;
 
-export default Rotator;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { speed, children } = props;
+  return <StyledComponent speed={speed}>{children}</StyledComponent>;
+};
+
+export const Rotator = StyledComponent;

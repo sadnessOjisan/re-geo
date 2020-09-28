@@ -2,19 +2,18 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 interface Props {
-  children: React.ReactNode;
   className?: string;
-  scale?: number;
+}
+
+interface PassedProps {
   speed?: number;
 }
 
-const Zoom = (props: Props) => {
-  const { className, children, speed, scale } = props;
-  return (
-    <Wrapper className={className} scale={scale} speed={speed}>
-      {children}
-    </Wrapper>
-  );
+type StyledProps = Pick<PassedProps, "speed">;
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <div className={className}>{children}</div>;
 };
 
 const Rotate = keyframes`
@@ -27,10 +26,15 @@ const Rotate = keyframes`
 }
 `;
 
-const Wrapper = styled.div<Props>`
-  animation: ${Rotate} ${(props: Props) => (props.speed ? props.speed : 5)}s
-    linear infinite alternate;
+const StyledComponent = styled(Component)<StyledProps>`
+  animation: ${Rotate} ${(props) => (props.speed ? props.speed : 5)}s linear
+    infinite alternate;
   display: inline-block;
 `;
 
-export default Zoom;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { speed, children } = props;
+  return <StyledComponent speed={speed}>{children}</StyledComponent>;
+};
+
+export const Zoom = ContainerComponent;
