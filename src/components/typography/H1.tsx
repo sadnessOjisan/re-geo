@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import FontStyle from "../../constants/font";
 
 interface Props {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ const StyledComponent = styled(Component)`
   font-weight: bold;
   text-rendering: optimizelegibility;
   display: block;
+  font-family: ${FontStyle.OldFassion};
 `;
 
 export const H1 = StyledComponent;

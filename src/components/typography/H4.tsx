@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import FontStyle from "../../constants/font";
 
 interface Props {
   children: React.ReactNode;
@@ -19,5 +20,6 @@ const StyledComponent = styled(Component)`
   line-height: 20px;
   text-rendering: optimizelegibility;
   display: block;
+  font-family: ${FontStyle.OldFassion};
 `;
 export const H4 = StyledComponent;

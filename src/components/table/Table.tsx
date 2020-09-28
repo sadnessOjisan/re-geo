@@ -11,9 +11,9 @@ interface Props extends PassedProps {
 }
 
 const Component = (props: Props) => {
-  const { headers, rows } = props;
+  const { headers, rows, className } = props;
   return (
-    <table>
+    <table className={className}>
       <thead>
         <tr>
           {headers.map((header, idx) => (
@@ -48,7 +48,7 @@ const StyledComponent = styled(Component)`
   font-size: 16px;
   line-height: 20px;
   color: #ff0;
-  & > thead {
+  & thead {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
@@ -62,6 +62,8 @@ const StyledComponent = styled(Component)`
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
+    display: table-cell;
+    border-left: 1px solid #008000;
   }
   & tbody {
     display: table-row-group;

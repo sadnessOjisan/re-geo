@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from "../../img/index";
 
 interface PassedProps {
-  rate?: number;
+  rate: number;
 }
 
 interface Props extends PassedProps {
@@ -20,12 +20,12 @@ const Component = (props: Props) => {
 };
 
 const StyledComponent = styled(Component)<PassedProps>`
-  & bar {
+  & .bar {
     background: #c0c0c0 url(${Image.Progress}) top left repeat-x !important;
     border: 1px solid #fff;
     border-top: 1px solid #808080;
     border-left: 1px solid #808080;
-    width: ${(props) => (props.rate ? props.rate : 100)}%;
+    width: ${(props) => props.rate}%;
     height: 20px;
   }
 `;
