@@ -2,16 +2,15 @@ import * as React from "react";
 import styled from "styled-components";
 
 interface Props {
-  children: React.ReactNode;
   className?: string;
 }
 
-const PillNav = (props: Props) => {
+const Component: React.FC<Props> = (props) => {
   const { children, className } = props;
-  return <Nav className={className}>{children}</Nav>;
+  return <ul className={className}>{children}</ul>;
 };
 
-const Nav = styled.ul`
+const StyledComponent = styled(Component)`
   margin-bottom: 20px;
   margin-left: 0;
   list-style: none;
@@ -25,4 +24,4 @@ const Nav = styled.ul`
   padding-inline-start: 40px;
 `;
 
-export default PillNav;
+export const PillNav = StyledComponent;

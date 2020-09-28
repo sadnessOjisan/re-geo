@@ -11,7 +11,7 @@ interface Props extends PassedProps {
 }
 
 const Component: React.FC<Props> = (props) => {
-  const { children, pattern, className } = props;
+  const { children, className } = props;
   return <div className={className}>{children}</div>;
 };
 
