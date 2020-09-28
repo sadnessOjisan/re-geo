@@ -2,22 +2,20 @@ import * as React from "react";
 import styled from "styled-components";
 import COLOR from "../../constants/color";
 
-interface Props {
+interface PassedProps {
   type?: "success" | "warning" | "important" | "info" | "inverse";
-  children: React.ReactNode;
+}
+
+interface Props extends PassedProps {
   className?: string;
 }
 
-const Badge = (props: Props) => {
-  const { type, children, className } = props;
-  return (
-    <StyledBadge type={type} className={className}>
-      {children}
-    </StyledBadge>
-  );
+const Component: React.FC<Props> = (props) => {
+  const { children, className } = props;
+  return <span className={className}>{children}</span>;
 };
 
-const StyledBadge = styled.span<Props>`
+const StyledComponent = styled.span<Props>`
   padding-right: 9px;
   padding-left: 9px;
   border-radius: 9px;
@@ -55,4 +53,9 @@ const StyledBadge = styled.span<Props>`
   }};
 `;
 
-export default Badge;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  const { type, children } = props;
+  return <StyledComponent type={type}>{children}</StyledComponent>;
+};
+
+export const Badge = ContainerComponent;
