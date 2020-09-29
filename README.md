@@ -1,12 +1,16 @@
 # re-geo
 
-react based geocities components library
+![image](https://github.com/sadnessOjisan/re-geo/blob/master/sampleImage.png?raw=true)
 
+react based geocities component.
+Here is components. https://re-geo-storybook.netlify.com/
 
 ## how to use
 
 ```sh
 npm i re-geo
+
+# or
 
 yarn add re-geo
 ```
@@ -21,20 +25,20 @@ export default function App() {
     <div className="App">
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <Button>a</Button>
+      <Button>Click Me!</Button>
     </div>
   );
 }
 ```
 
+You can check all components in [this storybook](https://re-geo-storybook.netlify.app).
+
+## Thanks
+
+This is inspired by [geo-bootstrap](https://github.com/divshot/geo-bootstrap). Thanks.
+
 ## TODO
 
-
-
-- [ ] 互換 marquee は remarquee から持ってくる（つまり作り直す）
+- [ ]  marquee
 - [ ] font tag
 - [ ] tab
-
-## special thanks
-
-some component are inspired by 
