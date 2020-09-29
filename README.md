@@ -1,8 +1,15 @@
 # re-geo
 
-大幅に書き換える
+react based geocities components library
 
-https://www.npmjs.com/package/re-geo
+
+## how to use
+
+```sh
+npm i re-geo
+
+yarn add re-geo
+```
 
 ```jsx
 import * as React from "react";
@@ -22,18 +29,12 @@ export default function App() {
 
 ## TODO
 
-- [ ] s-c refactoring
-- [ ] storybook
-- [ ] prettier, eslint
-- [ ] CI/CD
 
----
 
-- [ ] typography に font 読み込む
 - [ ] 互換 marquee は remarquee から持ってくる（つまり作り直す）
 - [ ] font tag
 - [ ] tab
 
 ## special thanks
 
-some component are inspired by brahbrah
+some component are inspired by 
