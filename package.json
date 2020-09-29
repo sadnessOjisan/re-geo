@@ -44,7 +44,7 @@
   },
   "scripts": {
     "format:fix": "prettier --write '**/*.{ts,tsx,js,jsx,json,md}'",
-    "format": "prettier './src/**/*.{ts,tsx,js,jsx,json,md}' -- --check",
+    "format": "prettier --check './src/**/*.{ts,tsx,js,jsx,json,md}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx,js,jsx,json,md}'",
     "lint": "eslint 'src/**/*.{ts,tsx,js,jsx,json,md}'",
     "typecheck": "tsc -p . --noEmit",
