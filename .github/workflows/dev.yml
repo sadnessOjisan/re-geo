@@ -22,5 +22,7 @@ jobs:
         run: npm run typecheck
       - name: lint
         run: npm run lint
+      - name: format
+        run: npm run format
       - name: build
         run: npm run build

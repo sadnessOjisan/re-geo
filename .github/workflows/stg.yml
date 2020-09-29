@@ -18,6 +18,10 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: install
         run: npm install
+      - name: Can Publish
+        run: npx can-npm-publish --verbose
+      - name: typecheck
+        run: npm run typecheck
       - name: lint
         run: npm run lint
       - name: format
