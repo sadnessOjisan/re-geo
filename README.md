@@ -1,67 +1,40 @@
 # re-geo
 
-![image](https://github.com/sadnessOjisan/re-geo/blob/master/sampleImage.png?raw=true)
+react based geocities components library
 
-react based geocities component.
-Here is components. https://re-geo-storybook.netlify.com/
 
-This is inspired by [geo-bootstrap](https://github.com/divshot/geo-bootstrap). Thanks.
-
-## Usage
-
-to install
-
-```
-$ npm i -S re-geo
-```
-
-to use
-
-```tsx
-import Button from "re-geo";
-
-const GeoButton = () => {
-  return <Button>geo cities!!</Button>;
-};
-```
-
-## Customization
-
-This app has no html.
-For debug, should use storybook.
-
-### storybook
-
-build storybook
+## how to use
 
 ```sh
-$ yarn run buildstorybook
+npm i re-geo
+
+yarn add re-geo
 ```
 
-start storybook
+```jsx
+import * as React from "react";
+import { Button } from "re-geo";
+import "./styles.css";
 
-```sh
-$ yarn run storybook
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <Button>a</Button>
+    </div>
+  );
+}
 ```
 
-### export
+## TODO
 
-After make componend and before build, you should export component.
 
-in `src/index.ts` just like do this
 
-```ts
-import Hoge from "./constants/hoge";
+- [ ] 互換 marquee は remarquee から持ってくる（つまり作り直す）
+- [ ] font tag
+- [ ] tab
 
-export { Hoge };
-```
+## special thanks
 
-### deploy
-
-Befor deploy, you should update `package.json` version.
-
-```sh
-$ yarn run build:prd
-
-$ npm publish
-```
+some component are inspired by 

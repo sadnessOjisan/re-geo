@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-const ButtonGroup = (props: Props) => {
+const Component: React.FC<Props> = (props) => {
   const { className, children } = props;
-  return <SButtonGroup className={className}>{children}</SButtonGroup>;
+  return <div className={className}>{children}</div>;
 };
 
-const SButtonGroup = styled.div`
+const StyledComponent = styled(Component)`
   position: relative;
   display: inline-block;
   font-size: 0;
@@ -19,4 +19,4 @@ const SButtonGroup = styled.div`
   vertical-align: middle;
 `;
 
-export default ButtonGroup;
+export const ButtonGroup = StyledComponent;

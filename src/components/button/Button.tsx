@@ -18,7 +18,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const Button = (props: Props) => {
+const _Button = (props: Props) => {
   const { className, children, type, size, isDisable, onClick } = props;
   return (
     <SButton
@@ -109,4 +109,4 @@ const SButton = styled.a<Props>`
   text-decoration: underline !important;
 `;
 
-export default Button;
+export const Button = _Button;

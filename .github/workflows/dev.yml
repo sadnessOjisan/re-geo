@@ -1,24 +1,28 @@
-name: CI
+name: DEV
 
 on:
   pull_request:
-    branches: [master]
+    branches: ["*", "!master"]
 
 jobs:
-  build:
+  release:
+    name: check version, add tag and release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: yarn install
-        run: |
-          yarn install
-      - name: yarn lint
-        run: |
-          yarn lint:ci
+          registry-url: "https://registry.npmjs.org"
+      - name: install
+        run: npm install
+      - name: typecheck
+        run: npm run typecheck
+      - name: lint
+        run: npm run lint
+      - name: format
+        run: npm run format
       - name: build
-        run: |
-          yarn build:dev
+        run: npm run build
