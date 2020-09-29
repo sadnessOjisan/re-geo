@@ -1,8 +1,8 @@
-name: CI
+name: DEV
 
 on:
   pull_request:
-    branches: [master]
+    branches: ["*", "!master"]
 
 jobs:
   release:
@@ -18,5 +18,9 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: install
         run: npm install
+      - name: typecheck
+        run: npm run typecheck
+      - name: lint
+        run: npm run lint
       - name: build
         run: npm run build

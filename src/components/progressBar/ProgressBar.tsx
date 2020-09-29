@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Image from "../../img/index";
+import { Progress } from "../../img/index";
 
 interface PassedProps {
   rate: number;
@@ -21,7 +21,7 @@ const Component = (props: Props) => {
 
 const StyledComponent = styled(Component)<PassedProps>`
   & .bar {
-    background: #c0c0c0 url(${Image.Progress}) top left repeat-x !important;
+    background: #c0c0c0 url(${Progress}) top left repeat-x !important;
     border: 1px solid #fff;
     border-top: 1px solid #808080;
     border-left: 1px solid #808080;

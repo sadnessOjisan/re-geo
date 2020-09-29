@@ -9,12 +9,32 @@ export interface Props {
 export const Default: React.FC<Props> = () => {
   return (
     <Table
-      headers={[<div>head1</div>, <div>head2</div>, <div>head3</div>]}
+      headers={[
+        <div key="1">head1</div>,
+        <div key="2">head2</div>,
+        <div key="3">head3</div>,
+      ]}
       rows={[
-        [<div>row11</div>, <div>row12</div>, <div>row13</div>],
-        [<div>row21</div>, <div>row22</div>, <div>row23</div>],
-        [<div>row31</div>, <div>row32</div>, <div>row33</div>],
-        [<div>row41</div>, <div>row42</div>, <div>row43</div>],
+        [
+          <div key="11">row11</div>,
+          <div key="12">row12</div>,
+          <div key="13">row13</div>,
+        ],
+        [
+          <div key="21">row21</div>,
+          <div key="22">row22</div>,
+          <div key="23">row23</div>,
+        ],
+        [
+          <div key="31">row31</div>,
+          <div key="32">row32</div>,
+          <div key="33">row33</div>,
+        ],
+        [
+          <div key="41">row41</div>,
+          <div key="42">row42</div>,
+          <div key="43">row43</div>,
+        ],
       ]}
     ></Table>
   );
