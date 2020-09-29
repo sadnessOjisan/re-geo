@@ -50,6 +50,6 @@
     "typecheck": "tsc -p . --noEmit",
     "build": "rollup --config rollup.config.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s public"
   }
 }
