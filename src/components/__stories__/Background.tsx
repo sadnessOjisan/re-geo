@@ -1,15 +1,24 @@
 import React from "react";
-import { BackGround } from "../index";
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { BackGround as _Background } from "../index";
 
-export interface Props {
-  type: string;
+interface Props {
+  /** 背景パターン */
+  pattern: "stars" | "microfab" | "rainbow";
 }
 
-export const BackgroundStory: React.FC<Props> = () => {
-  return <BackGround pattern="stars">test</BackGround>;
+const Template: Story<Props> = (args: Props) => (
+  <div style={{ width: "100vw", height: "100vw" }}>
+    <_Background {...args} />
+  </div>
+);
+
+export const Background = Template.bind({});
+Background.args = {
+  pattern: "stars",
 };
 
 export default {
-  title: "Components/BackgroundStory",
-  component: BackgroundStory,
-};
+  title: "Components/Background",
+  component: _Background,
+} as Meta;

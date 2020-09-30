@@ -1,15 +1,19 @@
 import React from "react";
-import { Badge } from "../index";
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { Badge as _Badge } from "../index";
 
 export interface Props {
-  type: string;
+  type?: "success" | "warning" | "important" | "info" | "inverse";
 }
 
-export const BadgeStory: React.FC<Props> = () => {
-  return <Badge type="success">test</Badge>;
+const Template: Story<Props> = (args: Props) => <_Badge {...args}>test</_Badge>;
+
+export const Badge = Template.bind({});
+Badge.args = {
+  type: "success",
 };
 
 export default {
-  title: "Components/BadgeStory",
-  component: BadgeStory,
-};
+  title: "Components/Badge",
+  component: _Badge,
+} as Meta;

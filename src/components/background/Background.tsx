@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Stars, Microfab, Rainbow } from "../../img/index";
 
 interface PassedProps {
+  /** 背景パターン */
   pattern: "stars" | "microfab" | "rainbow";
 }
 

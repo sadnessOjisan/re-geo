@@ -14,21 +14,6 @@ Alert.args = {
   type: "alert",
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  type: "error",
-};
-
-export const Success = Template.bind({});
-Success.args = {
-  type: "success",
-};
-
-export const Info = Template.bind({});
-Info.args = {
-  type: "info",
-};
-
 export default {
   title: "Components/Alerts",
   component: _Alerts,
