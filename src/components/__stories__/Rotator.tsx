@@ -10,7 +10,7 @@ const Template: Story<Props> = (args: Props) => (
 );
 
 export const Default = Template.bind({});
-Default.args = { rate: 50 };
+Default.args = { speed: 50 };
 
 export default {
   title: "Components/Rotator",
