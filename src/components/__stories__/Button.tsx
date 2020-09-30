@@ -1,8 +1,9 @@
 import React from "react";
-import { Button } from "../index";
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { Button as _Button } from "../index";
 
 export interface Props {
-  type?:
+  type:
     | "default"
     | "primary"
     | "info"
@@ -15,50 +16,24 @@ export interface Props {
   onClick?: () => void;
 }
 
-export const Default: React.FC<Props> = () => {
-  return <Button type="default">type</Button>;
+const Template: Story<Props> = (args: Props) => (
+  <_Button {...args}>test</_Button>
+);
+
+export const Type = Template.bind({});
+Type.args = {
+  type: "default",
 };
 
-export const Primary: React.FC<Props> = () => {
-  return <Button type="primary">type</Button>;
+export const Size = Template.bind({});
+Size.args = {
+  size: "normal",
 };
 
-export const Info: React.FC<Props> = () => {
-  return <Button type="info">type</Button>;
-};
-
-export const Success: React.FC<Props> = () => {
-  return <Button type="success">type</Button>;
-};
-
-export const Warning: React.FC<Props> = () => {
-  return <Button type="warning">type</Button>;
-};
-
-export const Danger: React.FC<Props> = () => {
-  return <Button type="danger">type</Button>;
-};
-
-export const Inverse: React.FC<Props> = () => {
-  return <Button type="inverse">type</Button>;
-};
-
-export const Normal: React.FC<Props> = () => {
-  return (
-    <Button type="default" size="normal">
-      size
-    </Button>
-  );
-};
-
-export const Large: React.FC<Props> = () => {
-  return (
-    <Button type="default" size="large">
-      size
-    </Button>
-  );
-};
+export const Disable = Template.bind({});
+Disable.args = { type: "primary", isDisable: true };
 
 export default {
   title: "Components/Button",
-};
+  component: _Button,
+} as Meta;

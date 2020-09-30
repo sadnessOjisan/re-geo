@@ -2,10 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 import Rainbow from "../../img/rainbow.gif";
 
-interface Props {
-  children: React.ReactNode;
-  className?: string;
-  type?:
+interface PassedProps {
+  type:
     | "default"
     | "primary"
     | "info"
@@ -18,22 +16,16 @@ interface Props {
   onClick?: () => void;
 }
 
-const _Button = (props: Props) => {
-  const { className, children, type, size, isDisable, onClick } = props;
-  return (
-    <SButton
-      className={className}
-      type={type}
-      size={size}
-      isDisable={isDisable}
-      onClick={onClick}
-    >
-      {children}
-    </SButton>
-  );
+interface Props extends PassedProps {
+  className?: string;
+}
+
+const Component: React.FC<Props> = (props) => {
+  const { className, children } = props;
+  return <a className={className}>{children}</a>;
 };
 
-const SButton = styled.a<Props>`
+const StyledComponent = styled(Component)<PassedProps>`
   border: 6px ridge #bbb;
   padding: ${(props: Props) => {
     switch (props.size) {
@@ -109,4 +101,8 @@ const SButton = styled.a<Props>`
   text-decoration: underline !important;
 `;
 
-export const Button = _Button;
+const ContainerComponent: React.FC<PassedProps> = (props) => {
+  return <StyledComponent {...props}>{props.children}</StyledComponent>;
+};
+
+export const Button = ContainerComponent;
