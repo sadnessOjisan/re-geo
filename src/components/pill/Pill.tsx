@@ -23,6 +23,7 @@ const Component: React.FC<Props> = (props) => {
 const StyledComponent = styled(Component)<PassedProps>`
   line-height: 20px;
   display: list-item;
+  list-style: none;
 
   & a {
     padding-top: 8px;

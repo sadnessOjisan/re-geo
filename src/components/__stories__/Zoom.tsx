@@ -1,22 +1,18 @@
 import React from "react";
-import { Zoom } from "../index";
-
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { Zoom as _Zoom } from "../index";
 export interface Props {
-  rate?: number;
+  speed?: number;
 }
 
-export const Default: React.FC<Props> = () => {
-  return <Zoom speed={1}>Zoom</Zoom>;
-};
+const Template: Story<Props> = (args: Props) => (
+  <_Zoom {...args}>THIS IS Zoom COMPONENT.</_Zoom>
+);
 
-export const Five: React.FC<Props> = () => {
-  return <Zoom speed={5}>Zoom</Zoom>;
-};
-
-export const Ten: React.FC<Props> = () => {
-  return <Zoom speed={10}>Zoom</Zoom>;
-};
+export const Default = Template.bind({});
+Default.args = { speed: 0.5 };
 
 export default {
   title: "Components/Zoom",
-};
+  component: _Zoom,
+} as Meta;

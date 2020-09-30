@@ -1,34 +1,20 @@
 import React from "react";
-import { ProgressBar } from "../index";
-
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { ProgressBar as _ProgressBar } from "../index";
 export interface Props {
-  rate?: number;
+  rate: number;
 }
 
-export const Default: React.FC<Props> = () => {
-  return (
-    <div style={{ width: 300 }}>
-      <ProgressBar rate={50}></ProgressBar>
-    </div>
-  );
-};
+const Template: Story<Props> = (args: Props) => (
+  <div style={{ width: "320px", backgroundColor: "pink", padding: 12 }}>
+    <_ProgressBar {...args}>THIS IS ProgressBar COMPONENT.</_ProgressBar>
+  </div>
+);
 
-export const Full: React.FC<Props> = () => {
-  return (
-    <div style={{ width: 300 }}>
-      <ProgressBar rate={100}></ProgressBar>
-    </div>
-  );
-};
-
-export const Empty: React.FC<Props> = () => {
-  return (
-    <div style={{ width: 300 }}>
-      <ProgressBar rate={0}></ProgressBar>
-    </div>
-  );
-};
+export const Default = Template.bind({});
+Default.args = { rate: 50 };
 
 export default {
   title: "Components/ProgressBar",
-};
+  component: _ProgressBar,
+} as Meta;
