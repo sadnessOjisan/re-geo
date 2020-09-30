@@ -1,6 +1,6 @@
 import * as React from "react";
 import {
-  SevenUpspot,
+  SevenUpspot as _SevenUpspot,
   Americanflag,
   Community,
   Computer01,
@@ -46,8 +46,8 @@ import {
 export const Americanflag_Image = () => {
   return <img src={Americanflag}></img>;
 };
-export const SevenUpspot_Image = () => {
-  return <img src={SevenUpspot}></img>;
+export const SevenUpspot = () => {
+  return <img src={_SevenUpspot}></img>;
 };
 export const Community_Image = () => {
   return <img src={Community}></img>;
