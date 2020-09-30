@@ -1,5 +1,7 @@
 # re-geo
 
+**sorry, Now breaking changing for v1.0.0**
+
 ![image](https://github.com/sadnessOjisan/re-geo/blob/master/sampleImage.png?raw=true)
 
 react based geocities component.
@@ -39,6 +41,6 @@ This is inspired by [geo-bootstrap](https://github.com/divshot/geo-bootstrap). T
 
 ## TODO
 
-- [ ]  marquee
+- [ ] marquee
 - [ ] font tag
 - [ ] tab

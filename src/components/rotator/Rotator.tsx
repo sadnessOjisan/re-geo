@@ -37,4 +37,4 @@ const ContainerComponent: React.FC<PassedProps> = (props) => {
   return <StyledComponent speed={speed}>{children}</StyledComponent>;
 };
 
-export const Rotator = StyledComponent;
+export const Rotator = ContainerComponent;

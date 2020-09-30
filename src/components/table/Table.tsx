@@ -2,8 +2,8 @@ import * as React from "react";
 import styled from "styled-components";
 
 interface PassedProps {
-  headers: React.ReactNode[];
-  rows: React.ReactNode[][];
+  headers: React.ReactNode[]; // header
+  rows: React.ReactNode[][]; // cells
 }
 
 interface Props extends PassedProps {
