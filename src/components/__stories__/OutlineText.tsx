@@ -1,5 +1,6 @@
 import React from "react";
-import { OutlineText } from "../index";
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { OutlineText as _OutlineText } from "../index";
 
 export interface Props {
   inlineColor: string;
@@ -7,15 +8,18 @@ export interface Props {
   strokeWidth: number;
 }
 
-export const OutlineTextStory: React.FC<Props> = () => {
-  return (
-    <OutlineText inlineColor="red" outlineColor="blue" strokeWidth={1}>
-      test
-    </OutlineText>
-  );
+const Template: Story<Props> = (args: Props) => (
+  <_OutlineText {...args}>THIS IS OutlineText COMPONENT.</_OutlineText>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  inlineColor: "red",
+  outlineColor: "blue",
+  strokeWidth: 1,
 };
 
 export default {
   title: "Components/OutlineText",
-  component: OutlineTextStory,
-};
+  component: _OutlineText,
+} as Meta;

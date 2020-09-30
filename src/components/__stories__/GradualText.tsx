@@ -1,25 +1,36 @@
 import React from "react";
-import { GradationText } from "../index";
+import { Story, Meta } from "../../../node_modules/@storybook/react/types-6-0";
+import { GradationText as _GradationText } from "../index";
 
 export interface Props {
-  type: string;
+  colorArray: string[];
+  isAnimate?: boolean;
+  fontSize?: number;
 }
 
-export const GradationTextStory: React.FC<Props> = () => {
-  return (
-    <GradationText colorArray={["red", "yellow", "blue"]}>test</GradationText>
-  );
+const Template: Story<Props> = (args: Props) => (
+  <_GradationText {...args}>THIS IS GradationText COMPONENT.</_GradationText>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  colorArray: ["red", "blue", "yellow"],
 };
 
-export const Animation: React.FC<Props> = () => {
-  return (
-    <GradationText colorArray={["red", "yellow", "blue"]} isAnimate={true}>
-      test
-    </GradationText>
-  );
+export const Animation = Template.bind({});
+Animation.args = {
+  colorArray: ["red", "blue", "yellow"],
+  isAnimate: true,
+};
+
+export const BigAnimation = Template.bind({});
+BigAnimation.args = {
+  colorArray: ["red", "blue", "yellow"],
+  isAnimate: true,
+  fontSize: 48,
 };
 
 export default {
   title: "Components/GradationText",
-  component: GradationTextStory,
-};
+  component: _GradationText,
+} as Meta;

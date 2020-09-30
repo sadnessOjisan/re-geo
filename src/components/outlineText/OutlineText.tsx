@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+// TODO: font size も可変にしたい
+
 interface PassedProps {
   inlineColor: string;
   outlineColor: string;

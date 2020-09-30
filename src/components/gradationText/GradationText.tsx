@@ -2,6 +2,7 @@ import * as React from "react";
 import styled, { keyframes, css } from "styled-components";
 
 interface PassedProps {
+  /** length 3 */
   colorArray: string[];
   isAnimate?: boolean;
   fontSize?: number;
