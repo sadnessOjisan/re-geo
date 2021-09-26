@@ -13,21 +13,23 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
           registry-url: "https://registry.npmjs.org"
       - name: install
-        run: npm install
-      - name: Can Publish
-        run: npx can-npm-publish --verbose
+        run: yarn install
+      - name: can npm publish
+        run: yarn run can-npm-publish
+        working-directory: ./packages/lib
       - name: typecheck
-        run: npm run typecheck
+        run: yarn run typecheck
       - name: lint
-        run: npm run lint
+        run: yarn run lint:ci
       - name: format
-        run: npm run format
+        run: yarn run format:ci
       - name: build
-        run: npm run build
+        run: yarn run lib build
       - name: release
         run: npm publish
+        working-directory: ./packages/lib
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
