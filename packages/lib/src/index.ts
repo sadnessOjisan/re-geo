@@ -1,1 +1,1 @@
-export const main = "hello world!!";
+export * from "./components";
