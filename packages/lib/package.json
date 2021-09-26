@@ -20,6 +20,7 @@
     "vite-plugin-dts": "^0.8.1"
   },
   "dependencies": {
+    "@stitches/react": "^1.2.1",
     "react": "^17.0.2"
   }
 }

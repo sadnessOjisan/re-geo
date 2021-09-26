@@ -359,6 +359,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@stitches/react@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-1.2.1.tgz#1e6e5877ccb0151a26f27c731e03efee55e8f7c6"
+  integrity sha512-xVnYuU3ZwvI4ghdM5r21hCb4eejkTZQqxm3q5iRTBnrbiG/8jpbEWTi8gXXjZ9X4+PssjuqBrjvPSqAcPvya6w==
+
 "@ts-morph/common@~0.10.1":
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/@ts-morph/common/-/common-0.10.1.tgz#be15b9ab13a32bbc1f6a6bd7dc056b2247b272eb"
