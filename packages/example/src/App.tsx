@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Blink } from "re-geo";
+import { useState } from "react";
 
 function App() {
   return (
