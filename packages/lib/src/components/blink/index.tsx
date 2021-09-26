@@ -1,5 +1,8 @@
 import { VFC } from "react";
 
-export const Blink: VFC = () => {
-  return <div>blink</div>;
+type Props = {
+  text: string;
+};
+export const Blink: VFC<Props> = (props) => {
+  return <div>{props.text}</div>;
 };
