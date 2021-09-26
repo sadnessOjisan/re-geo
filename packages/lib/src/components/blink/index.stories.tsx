@@ -1,6 +1,7 @@
-import { ComponentProps, ComponentType, ReactPropTypes } from "react";
+import { Story } from "@storybook/react";
+import { ComponentProps } from "react";
+
 import { Blink as Component } from "./index";
-import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Blink",
