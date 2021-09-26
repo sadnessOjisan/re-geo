@@ -1,12 +1,13 @@
-import { Blink } from "re-geo";
-import { useState } from "react";
+import { VFC } from "react";
 
-function App() {
+import { Blink } from "../../lib/dist";
+
+const App: VFC = () => {
   return (
     <div className="App">
-      <Blink>aaa</Blink>
+      <Blink text="hello" />
     </div>
   );
-}
+};
 
 export default App;
