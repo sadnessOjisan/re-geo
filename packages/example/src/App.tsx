@@ -1,6 +1,6 @@
 import { VFC } from "react";
 
-import { Blink } from "../../lib/dist";
+import { Blink } from "../../lib/src";
 
 const App: VFC = () => {
   return (
