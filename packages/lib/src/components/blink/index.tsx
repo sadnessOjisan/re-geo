@@ -4,6 +4,7 @@ import { VFC } from "react";
 type Props = {
   text: string;
   speed?: "high" | "normal" | "slow";
+  style?: React.CSSProperties;
 };
 
 const blinker = keyframes({
@@ -32,6 +33,8 @@ const styles = {
 
 export const Blink: VFC<Props> = (props) => {
   return (
-    <div className={styles.wrapper({ speed: props.speed })}>{props.text}</div>
+    <div className={styles.wrapper({ speed: props.speed })} style={props.style}>
+      {props.text}
+    </div>
   );
 };
