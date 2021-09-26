@@ -1,0 +1,10 @@
+{
+  "name": "re-geo",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "repository": "https://github.com/sadnessOjisan/re-geo.git",
+  "author": "sadness_ojisan <sadness.ojisan@gmail.com>",
+  "license": "MIT"
+}
