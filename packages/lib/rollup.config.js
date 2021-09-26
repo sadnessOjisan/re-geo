@@ -7,7 +7,7 @@ import image from "@rollup/plugin-image";
 export default {
   input: "src/index.ts",
   output: {
-    file: "dist/regeo.js",
+    file: "dist/build.js",
     format: "esm",
     sourcemap: true,
   },

@@ -4,8 +4,7 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "main": "./dist/build.js",
   "license": "MIT",
   "scripts": {
     "build": "rollup --config rollup.config.js"
