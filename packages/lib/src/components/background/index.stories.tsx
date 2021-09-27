@@ -9,7 +9,9 @@ export default {
 };
 
 const Template: Story<ComponentProps<typeof Component>> = (args) => (
-  <Component {...args} />
+  <div style={{ width: "100vw", height: "100vh" }}>
+    <Component {...args} />
+  </div>
 );
 
 export const Microfab = Template.bind({});
@@ -25,4 +27,14 @@ Stars.args = {
 export const Rainbow = Template.bind({});
 Rainbow.args = {
   pattern: "rainbow",
+};
+
+export const IncludeChildComponent = Template.bind({});
+IncludeChildComponent.args = {
+  pattern: "rainbow",
+  children: (
+    <div>
+      <h1>Hello re-geo!!</h1>
+    </div>
+  ),
 };

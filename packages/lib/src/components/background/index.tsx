@@ -1,7 +1,7 @@
 import { css } from "@stitches/react";
-import { VFC } from "react";
+import { FC, VFC } from "react";
 
-import { Microfab, Rainbow,Stars } from "../../assets";
+import { Microfab, Rainbow, Stars } from "../../assets";
 
 type Props = {
   pattern: "stars" | "microfab" | "rainbow";
@@ -9,6 +9,8 @@ type Props = {
 
 const styles = {
   wrapper: css({
+    width: "100%",
+    height: "100%",
     variants: {
       pattern: {
         stars: {
@@ -25,6 +27,10 @@ const styles = {
   }),
 };
 
-export const Background: VFC<Props> = (props) => {
-  return <div className={styles.wrapper({ pattern: props.pattern })}></div>;
+export const Background: FC<Props> = (props) => {
+  return (
+    <div className={styles.wrapper({ pattern: props.pattern })}>
+      {props.children}
+    </div>
+  );
 };
