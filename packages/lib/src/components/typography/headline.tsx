@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import { OLD_FASHION } from "../../const";
 import {
   BLUE,
