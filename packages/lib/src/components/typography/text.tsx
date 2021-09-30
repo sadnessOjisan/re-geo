@@ -8,7 +8,7 @@ type Props = {
 };
 
 const baseStyle: React.CSSProperties = {
-  font: OLD_FASHION,
+  fontFamily: OLD_FASHION,
 };
 
 const FONT_SIZE = 16;

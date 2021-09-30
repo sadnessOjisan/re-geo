@@ -1,5 +1,4 @@
 import { Story } from "@storybook/react";
-import { ComponentProps } from "react";
 import { Americanflag, Community, Computer, SevenUpspot } from ".";
 
 export default {
