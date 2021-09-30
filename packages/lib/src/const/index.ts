@@ -1,1 +1,1 @@
-export { OLD_FASHION } from "./font";
+export { OLD_FASHION } from "./internal/font";
