@@ -17,7 +17,7 @@ type Props = {
 };
 
 const baseStyle: React.CSSProperties = {
-  font: OLD_FASHION,
+  fontFamily: OLD_FASHION,
 };
 
 const H1_FONT_SIZE = 44;
