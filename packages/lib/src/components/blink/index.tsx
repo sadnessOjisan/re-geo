@@ -1,8 +1,7 @@
 import { css, keyframes } from "@stitches/react";
-import { VFC } from "react";
+import { FC } from "react";
 
 type Props = {
-  text: string;
   speed?: "high" | "normal" | "slow";
   style?: React.CSSProperties;
 };
@@ -31,10 +30,10 @@ const styles = {
   }),
 };
 
-export const Blink: VFC<Props> = (props) => {
+export const Blink: FC<Props> = (props) => {
   return (
     <div className={styles.wrapper({ speed: props.speed })} style={props.style}>
-      {props.text}
+      {props.children}
     </div>
   );
 };
