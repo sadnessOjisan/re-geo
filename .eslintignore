@@ -1,3 +1,4 @@
 .eslintrc.js
 vite.config.js
 rollup.config.js
+gatsby-config.js
