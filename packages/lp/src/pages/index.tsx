@@ -1,4 +1,4 @@
-import { VFC } from "react";
+import React, { VFC } from "react";
 
 const IndexPage: VFC = () => {
   return <main>hello world</main>;
