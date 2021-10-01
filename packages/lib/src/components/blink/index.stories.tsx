@@ -14,5 +14,5 @@ const Template: Story<ComponentProps<typeof Component>> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  text: "blink",
+  children: "hello world",
 };

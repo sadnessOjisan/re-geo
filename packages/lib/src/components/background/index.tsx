@@ -1,5 +1,5 @@
 import { css } from "@stitches/react";
-import { FC, VFC } from "react";
+import { FC } from "react";
 
 import { Microfab, Rainbow, Stars } from "../../assets";
 
