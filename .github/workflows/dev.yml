@@ -1,8 +1,12 @@
 name: DEV
 
 on:
-  pull_request:
-    branches: ["*", "!master"]
+  push:
+    branches:
+      - "*"
+      - "*/*"
+      - "**"
+      - "!master"
 
 jobs:
   release:
@@ -14,15 +18,15 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
           registry-url: "https://registry.npmjs.org"
       - name: install
-        run: npm install
+        run: yarn install
       - name: typecheck
-        run: npm run typecheck
+        run: yarn run typecheck
       - name: lint
-        run: npm run lint
+        run: yarn run lint:ci
       - name: format
-        run: npm run format
+        run: yarn run format:ci
       - name: build
-        run: npm run build
+        run: yarn run lib build
