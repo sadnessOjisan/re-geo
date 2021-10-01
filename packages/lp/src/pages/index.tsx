@@ -4,7 +4,7 @@ import React, { VFC } from "react";
 const IndexPage: VFC = () => {
   return (
     <main>
-      <Blink text="aa"></Blink> hello world
+      <Blink>aa</Blink> hello world
     </main>
   );
 };
