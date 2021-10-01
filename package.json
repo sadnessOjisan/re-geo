@@ -10,6 +10,7 @@
   "scripts": {
     "example": "yarn workspace example",
     "lib": "yarn workspace re-geo",
+    "lp": "yarn workspace lp",
     "typecheck": "tsc --noEmit",
     "lint:fix": "eslint --fix '**/src/**/*.{ts,tsx,js,jsx,json,md}'",
     "lint:ci": "eslint '**/src/**/*.{ts,tsx,js,jsx,json,md}'",
