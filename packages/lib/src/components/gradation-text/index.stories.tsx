@@ -4,7 +4,7 @@ import { ComponentProps } from "react";
 import { GradationText as Component } from "./index";
 
 export default {
-  title: "Text",
+  title: "Gradation",
   component: Component,
 };
 
@@ -14,5 +14,5 @@ const Template: Story<ComponentProps<typeof Component>> = (args) => (
 
 export const ThreeCorlor = Template.bind({});
 ThreeCorlor.args = {
-  colors: ["#ff0", "#0ff", "#f00"],
+  colors: ["#ff0 0%", "#0ff 35%", "#f00 70%"],
 };
