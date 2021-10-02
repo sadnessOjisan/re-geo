@@ -16,7 +16,7 @@ import {
 import { WHITE } from "re-geo/src/const/internal/color";
 import React, { VFC } from "react";
 
-import { NPM_URL, STORYBOOK_URL } from "../const/url";
+import { AUTHOR_URL, GITHUB_URL, NPM_URL, STORYBOOK_URL } from "../const/url";
 
 const styles = {
   wrapper: css`
@@ -47,8 +47,15 @@ const styles = {
     background: white;
     padding: 16px 32px;
   `,
+  innerContainer: css`
+    max-width: 1080px;
+    margin: 0 auto;
+  `,
   sectionCommon: css`
     margin: 32px 0px;
+    :last-child {
+      margin-bottom: 0;
+    }
   `,
   firstViewSection: css`
     min-height: 200px;
@@ -73,110 +80,125 @@ const IndexPage: VFC = () => {
           <Background pattern="flame">
             <div className={styles.headerContainer}>
               <div>
-                <p>re-geo</p>
+                <Text>re-geo</Text>
               </div>
               <div>
-                <a>npm</a>
-                <a>GitHub</a>
-                <a>About author</a>
+                <a href={NPM_URL}>
+                  <Text>npm</Text>
+                </a>
+                <a href={GITHUB_URL}>
+                  <Text>GitHub</Text>
+                </a>
+                <a href={AUTHOR_URL}>
+                  <Text>Author</Text>
+                </a>
               </div>
             </div>
           </Background>
         </div>
-        <section className={cx(styles.sectionCommon, styles.firstViewSection)}>
-          <div className={styles.leftStack}>
-            <img src={IELogo}></img>
-            <img src={NSLogo}></img>
-          </div>
-          <Center
-            isHorizontal
-            isVertical
-            __unsafe__style={{ flexDirection: "column", marginBottom: 32 }}
+        <div className={styles.innerContainer}>
+          <section
+            className={cx(styles.sectionCommon, styles.firstViewSection)}
           >
-            <Headline level={1} __unsafe__className={styles.title}>
-              <GradationText
-                colors={[
-                  {
-                    color: "green",
-                    point: "0%",
-                  },
-                  {
-                    color: "#0ff",
-                    point: "25%",
-                  },
-                  {
-                    color: "#f00",
-                    point: "50%",
-                  },
-                  {
-                    color: "orange",
-                    point: "75%",
-                  },
-                ]}
-                isAnimation={true}
-              >
-                re-geo
-              </GradationText>
-            </Headline>
-            <Headline level={2}>
-              react based geo-cities style component
-            </Headline>
-          </Center>
-          <Center isHorizontal isVertical>
-            <div className={styles.shell}>
-              <Text>npm install re-geo</Text>
-            </div>
-          </Center>
-        </section>
-
-        <section className={cx(styles.sectionCommon)}>
-          <Headline level={2}>Component catalog</Headline>
-          <div className={styles.animationItem}>
             <ClassicMarquee>
-              <a href={STORYBOOK_URL}>
-                <Text color="white">storybook</Text>
-              </a>
+              <Text __unsafe__style={{ fontSize: 28, color: WHITE }}>
+                We dont support IE
+              </Text>
             </ClassicMarquee>
-          </div>
-          <Center isVertical isHorizontal>
-            <div className={styles.animationItem}>
-              <Rotator>
-                <a href={NPM_URL}>
-                  <Text color="white">npm</Text>
-                </a>
-              </Rotator>
+            <div className={styles.leftStack}>
+              <img src={IELogo}></img>
+              <img src={NSLogo}></img>
             </div>
-          </Center>
-          <div className={styles.animationItem}>
-            <Zoom>
-              <a href={STORYBOOK_URL}>
-                <Text color="white">storybook</Text>
-              </a>
-            </Zoom>
-          </div>
+            <Center
+              isHorizontal
+              isVertical
+              __unsafe__style={{ flexDirection: "column", marginBottom: 32 }}
+            >
+              <Headline level={1} __unsafe__className={styles.title}>
+                <GradationText
+                  colors={[
+                    {
+                      color: "green",
+                      point: "0%",
+                    },
+                    {
+                      color: "#0ff",
+                      point: "25%",
+                    },
+                    {
+                      color: "#f00",
+                      point: "50%",
+                    },
+                    {
+                      color: "orange",
+                      point: "75%",
+                    },
+                  ]}
+                  isAnimation={true}
+                >
+                  re-geo
+                </GradationText>
+              </Headline>
+              <Headline level={2}>
+                react based geo-cities style component
+              </Headline>
+            </Center>
+            <Center isHorizontal isVertical>
+              <div className={styles.shell}>
+                <Text>npm install re-geo</Text>
+              </div>
+            </Center>
+          </section>
 
-          <div>
-            <ClassicMarquee height="300px" vspace="80px">
-              <Rotator>
-                <Zoom>
-                  <a href={STORYBOOK_URL}>
-                    <Text color="white">storybook</Text>
+          <section className={cx(styles.sectionCommon)}>
+            <Headline level={2}>Component catalog</Headline>
+            <div className={styles.animationItem}>
+              <ClassicMarquee>
+                <a href={STORYBOOK_URL}>
+                  <Text color="white">storybook</Text>
+                </a>
+              </ClassicMarquee>
+            </div>
+            <Center isVertical isHorizontal>
+              <div className={styles.animationItem}>
+                <Rotator>
+                  <a href={NPM_URL}>
+                    <Text color="white">npm</Text>
                   </a>
-                </Zoom>
-              </Rotator>
-            </ClassicMarquee>
-          </div>
-          <a href={STORYBOOK_URL}>
-            <Button>storybook</Button>
-          </a>
-          <a href={STORYBOOK_URL}>
-            <Button type="primary">storybook</Button>
-          </a>
-        </section>
-        <section className={cx(styles.sectionCommon)}>
-          <Headline level={1}>sponsor</Headline>
-          <img src={Construction}></img>
-        </section>
+                </Rotator>
+              </div>
+            </Center>
+            <div className={styles.animationItem}>
+              <Zoom>
+                <a href={STORYBOOK_URL}>
+                  <Text color="white">storybook</Text>
+                </a>
+              </Zoom>
+            </div>
+
+            <div>
+              <ClassicMarquee height="300px" vspace="80px">
+                <Rotator>
+                  <Zoom>
+                    <a href={STORYBOOK_URL}>
+                      <Text color="white">storybook</Text>
+                    </a>
+                  </Zoom>
+                </Rotator>
+              </ClassicMarquee>
+            </div>
+            <a href={STORYBOOK_URL}>
+              <Button>storybook</Button>
+            </a>
+            <a href={STORYBOOK_URL}>
+              <Button type="primary">storybook</Button>
+            </a>
+          </section>
+          <section className={cx(styles.sectionCommon)}>
+            <Headline level={1}>sponsor</Headline>
+            <img src={Construction}></img>
+          </section>
+        </div>
       </Background>
     </div>
   );
