@@ -16,16 +16,19 @@ export const ThreeCorlor = Template.bind({});
 ThreeCorlor.args = {
   colors: [
     {
-      color: "#ff0",
+      color: "green",
       point: "0%",
     },
     {
       color: "#0ff",
-      point: "35%",
+      point: "25%",
     },
     {
       color: "#f00",
       point: "70%",
     },
   ],
+  __unsafe__style: {
+    fontSize: 80,
+  },
 };
