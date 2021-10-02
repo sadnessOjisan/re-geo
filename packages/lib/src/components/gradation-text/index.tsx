@@ -10,7 +10,6 @@ export const GradationText: FC<Props> = (props) => {
 
   return (
     <p
-      key={gradation}
       className={props.__unsafe__className}
       style={{
         display: props.inline ? "inline" : "inherit",
