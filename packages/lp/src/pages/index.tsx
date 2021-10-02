@@ -7,6 +7,8 @@ import {
   Construction,
   GradationText,
   Headline,
+  IELogo,
+  NSLogo,
   Rotator,
   Text,
   Zoom,
@@ -55,6 +57,12 @@ const styles = {
   animationItem: css`
     margin: 16px 0px;
   `,
+  leftStack: css`
+    display: flex;
+    flex-direction: column;
+    /* HACK: stretch value cause image flatten (https://cotodama.co/flexbox_img/) */
+    align-items: flex-start;
+  `,
 };
 
 const IndexPage: VFC = () => {
@@ -76,10 +84,14 @@ const IndexPage: VFC = () => {
           </Background>
         </div>
         <section className={cx(styles.sectionCommon, styles.firstViewSection)}>
+          <div className={styles.leftStack}>
+            <img src={IELogo}></img>
+            <img src={NSLogo}></img>
+          </div>
           <Center
             isHorizontal
             isVertical
-            __unsafe__style={{ flexDirection: "column" }}
+            __unsafe__style={{ flexDirection: "column", marginBottom: 32 }}
           >
             <Headline level={1} __unsafe__className={styles.title}>
               <GradationText
