@@ -5,6 +5,8 @@ import { assertNever } from "../../util/internal/assert-never";
 
 type Props = {
   pattern: "stars" | "microfab" | "rainbow" | "flame";
+  __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
 };
 
 export const Background: FC<Props> = (props) => {
@@ -27,7 +29,15 @@ export const Background: FC<Props> = (props) => {
       assertNever(props.pattern);
   }
   return (
-    <div style={{ ...backgroundStyle, width: "100%", height: "100%" }}>
+    <div
+      style={{
+        ...backgroundStyle,
+        width: "100%",
+        height: "100%",
+        ...props.__unsafe__style,
+      }}
+      className={props.__unsafe__className}
+    >
       {props.children}
     </div>
   );
