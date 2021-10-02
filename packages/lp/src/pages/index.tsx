@@ -1,3 +1,4 @@
+import { css } from "linaria";
 import {
   Background,
   ClassicMarquee,
@@ -8,9 +9,15 @@ import {
 } from "re-geo";
 import React, { VFC } from "react";
 
+const styles = {
+  wrapper: css`
+    padding: 12;
+  `,
+};
+
 const IndexPage: VFC = () => {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Background pattern="microfab">
         <Headline level={1}>re-geo</Headline>
         <Text>npm i re-geo</Text>
