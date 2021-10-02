@@ -7,3 +7,4 @@ export { Headline, Text } from "./typography";
 export { Zoom } from "./zoom";
 export { Center } from "./center";
 export { Button } from "./button";
+export { GradationText } from "./gradation-text";

@@ -5,6 +5,7 @@ import {
   Center,
   ClassicMarquee,
   Construction,
+  GradationText,
   Headline,
   Rotator,
   Text,
@@ -16,18 +17,18 @@ import { NPM_URL, STORYBOOK_URL } from "../const/url";
 
 const styles = {
   wrapper: css`
-    padding: 12;
     min-height: 100vh;
   `,
   header: css`
     width: 100%;
-    height: 80;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
   `,
   title: css`
     font-size: 80px;
+    margin-bottom: 32px;
   `,
   shell: css`
     width: 100;
@@ -39,6 +40,7 @@ const styles = {
   `,
   firstViewSection: css`
     min-height: 200px;
+    margin-top: 80px;
   `,
   animationItem: css`
     margin: 16px 0px;
@@ -50,14 +52,36 @@ const IndexPage: VFC = () => {
     <div className={styles.wrapper}>
       <Background pattern="microfab">
         <div className={styles.header}>
-          <Background pattern="rainbow">
+          <Background pattern="flame">
             <a>npm</a>
           </Background>
         </div>
         <section className={cx(styles.sectionCommon, styles.firstViewSection)}>
           <Center isHorizontal isVertical>
             <Headline level={1} __unsafe__className={styles.title}>
-              re-geo
+              <GradationText
+                colors={[
+                  {
+                    color: "green",
+                    point: "0%",
+                  },
+                  {
+                    color: "#0ff",
+                    point: "25%",
+                  },
+                  {
+                    color: "#f00",
+                    point: "50%",
+                  },
+                  {
+                    color: "orange",
+                    point: "75%",
+                  },
+                ]}
+                isAnimation={true}
+              >
+                re-geo
+              </GradationText>
             </Headline>
           </Center>
           <Center isHorizontal isVertical>
@@ -94,7 +118,7 @@ const IndexPage: VFC = () => {
           </div>
 
           <div>
-            <ClassicMarquee>
+            <ClassicMarquee height="300px" vspace="80px">
               <Rotator>
                 <Zoom>
                   <a href={STORYBOOK_URL}>
