@@ -1,6 +1,10 @@
 import { FC } from "react";
 
-type Props = { speed?: number };
+type Props = {
+  speed?: number;
+  __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
+};
 
 const DEFAULT_SPEED = 1;
 
@@ -19,7 +23,9 @@ export const Rotator: FC<Props> = (props) => {
         style={{
           animation: `rotate ${props.speed ?? DEFAULT_SPEED}s linear infinite`,
           display: "inline-block",
+          ...props.__unsafe__style,
         }}
+        className={props.__unsafe__className}
       >
         {props.children}
       </div>

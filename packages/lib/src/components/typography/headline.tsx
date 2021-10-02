@@ -15,6 +15,7 @@ type Props = {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   color?: string;
   __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
 };
 
 const baseStyle: React.CSSProperties = {
@@ -28,7 +29,12 @@ const H4_FONT_SIZE = 20;
 const H5_FONT_SIZE = 16;
 const H6_FONT_SIZE = 16;
 
-export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
+export const Headline: FC<Props> = ({
+  level,
+  children,
+  __unsafe__style,
+  __unsafe__className,
+}) => {
   switch (level) {
     case 1:
       return (
@@ -39,6 +45,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: RED,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h1>
@@ -52,6 +59,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: YELLOW,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h2>
@@ -65,6 +73,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: GREEN,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h3>
@@ -78,6 +87,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: CYAN,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h4>
@@ -91,6 +101,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: YELLOW_DARK,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h5>
@@ -104,6 +115,7 @@ export const Headline: FC<Props> = ({ level, children, __unsafe__style }) => {
             color: BLUE,
             ...__unsafe__style,
           }}
+          className={__unsafe__className}
         >
           {children}
         </h6>
