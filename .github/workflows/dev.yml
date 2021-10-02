@@ -28,15 +28,5 @@ jobs:
         run: yarn run format:ci
       - name: build library
         run: yarn run lib build
-      - name: build storybook
-        run: yarn run lib build-storybook
-      - name: build LP
-        run: yarn run lp build
       - name: typecheck
         run: yarn run typecheck
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_RE_GEO }}"
-          projectId: re-geo
-          channelId: "pr-${{ github.ref }}-${{ github.sha }}"
