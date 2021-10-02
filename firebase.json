@@ -4,6 +4,11 @@
       "target": "storybook",
       "public": "packages/lib/storybook-static",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "lp",
+      "public": "packages/lp/public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
 }
