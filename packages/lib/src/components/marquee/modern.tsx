@@ -2,6 +2,8 @@ import { FC } from "react";
 
 type Props = {
   duration: number;
+  __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
 };
 
 export const ModernMarquee: FC<Props> = (props) => {
@@ -11,7 +13,9 @@ export const ModernMarquee: FC<Props> = (props) => {
         height: "50px",
         overflow: "hidden",
         position: "relative",
+        ...props.__unsafe__style,
       }}
+      className={props.__unsafe__className}
     >
       <style>
         {`@keyframes toLeft {

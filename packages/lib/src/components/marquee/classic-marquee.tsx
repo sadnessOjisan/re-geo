@@ -14,6 +14,7 @@ type Props = {
   vspace?: string;
   width?: string;
   __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
   // TODO: impl event handler
   // onbounce: (e: any) => void;
   // onfinish: (e: any) => void;
@@ -40,6 +41,7 @@ export const ClassicMarquee: FC<Props> = (props) => {
       vspace={props.vspace}
       hspace={props.hspace}
       style={props.__unsafe__style}
+      className={props.__unsafe__className}
     >
       {props.children}
       {/* eslint-disable-next-line */}
