@@ -65,7 +65,7 @@ export const Button: FC<Props> = ({
       break;
     case "warning":
       skinStyle = {
-        color: WHITE,
+        color: BLACK,
         backgroundColor: YELLOW,
       };
       break;
@@ -113,8 +113,8 @@ export const Button: FC<Props> = ({
     <button
       disabled={isDisable === undefined ? DEFAULT_DISABLE : isDisable}
       style={{
-        ...skinStyle,
         ...sizeStyle,
+        ...skinStyle,
         ...__unsafe__style,
         border: "6px ridge #bbb",
         cursor: "pointer",

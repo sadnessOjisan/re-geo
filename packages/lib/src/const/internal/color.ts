@@ -1,5 +1,5 @@
 const RED = "#f00";
-const CYAN = "0ff";
+const CYAN = "#0ff";
 const GRAY = "#999";
 const WHITE = "#fff";
 const DARKGRAY = "#555";

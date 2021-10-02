@@ -20,6 +20,11 @@ Primary.args = {
   type: "primary",
 };
 
+export const Warning = Template.bind({});
+Warning.args = {
+  type: "warning",
+};
+
 export const Info = Template.bind({});
 Info.args = {
   type: "info",
