@@ -14,7 +14,7 @@ const DEFAULT_MAX_RATIO = 3;
 export const Zoom: FC<Props> = ({ children, speed, maxRatio, minRatio }) => {
   return (
     <>
-      <style>{`@keyframes rotate {
+      <style>{`@keyframes zoom {
           0% {
             transform: scale(${minRatio ?? DEFAULT_MIN_RATIO});
           }
@@ -24,7 +24,7 @@ export const Zoom: FC<Props> = ({ children, speed, maxRatio, minRatio }) => {
       }`}</style>
       <div
         style={{
-          animation: `rotate ${
+          animation: `zoom ${
             speed ?? DEFAULT_SPEED
           }s linear infinite alternate`,
           display: "inline-block",
