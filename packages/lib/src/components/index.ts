@@ -5,3 +5,4 @@ export { ProgressBar } from "./progress-bar";
 export { Rotator } from "./rotator";
 export { Headline, Text } from "./typography";
 export { Zoom } from "./zoom";
+export { Center } from "./center";
