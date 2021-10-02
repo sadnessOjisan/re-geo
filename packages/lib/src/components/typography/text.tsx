@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { OLD_FASHION } from "../../const";
 import { BLACK } from "../../const/internal/color";
+import { OLD_FASHION } from "../../const/internal/font";
 
 type Props = {
   color?: string;
