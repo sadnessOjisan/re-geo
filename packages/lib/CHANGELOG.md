@@ -11,8 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Alerts component
 - badge component
-- button component
-- center component
 - gradation text component
 - outline text component
 - pager component
