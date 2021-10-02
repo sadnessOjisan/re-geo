@@ -26,3 +26,18 @@ export const Up = Template.bind({});
 Up.args = {
   direction: "up",
 };
+
+export const AllPropsSetted = Template.bind({});
+AllPropsSetted.args = {
+  direction: "right",
+  behavior: "alternate",
+  bgcolor: "#f00",
+  height: "300px",
+  width: "200px",
+  loop: "3",
+  scrollamout: "300",
+  scrolldelay: "40",
+  truespeed: "3",
+  vspace: "4",
+  __unsafe__style: { color: "blue" },
+};
