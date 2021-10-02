@@ -16,6 +16,7 @@ import {
   Flames,
   Funky,
   Geocities,
+  GlyphiconsHalflings,
   GlyphiconsHalflingsWhite,
   Hacker,
   Heart,
