@@ -5,13 +5,22 @@ type Props = {
   speed?: number;
   maxRatio?: number;
   minRatio?: number;
+  __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
 };
 
 const DEFAULT_SPEED = 1;
 const DEFAULT_MIN_RATIO = 1;
 const DEFAULT_MAX_RATIO = 3;
 
-export const Zoom: FC<Props> = ({ children, speed, maxRatio, minRatio }) => {
+export const Zoom: FC<Props> = ({
+  children,
+  speed,
+  maxRatio,
+  minRatio,
+  __unsafe__className,
+  __unsafe__style,
+}) => {
   return (
     <>
       <style>{`@keyframes zoom {
@@ -28,7 +37,9 @@ export const Zoom: FC<Props> = ({ children, speed, maxRatio, minRatio }) => {
             speed ?? DEFAULT_SPEED
           }s linear infinite alternate`,
           display: "inline-block",
+          ...__unsafe__style,
         }}
+        className={__unsafe__className}
       >
         {children}
       </div>

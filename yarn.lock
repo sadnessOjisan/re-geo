@@ -2114,11 +2114,6 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
-"@stitches/react@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-1.2.1.tgz#1e6e5877ccb0151a26f27c731e03efee55e8f7c6"
-  integrity sha512-xVnYuU3ZwvI4ghdM5r21hCb4eejkTZQqxm3q5iRTBnrbiG/8jpbEWTi8gXXjZ9X4+PssjuqBrjvPSqAcPvya6w==
-
 "@storybook/addon-actions@6.3.9", "@storybook/addon-actions@^6.3.8":
   version "6.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.3.9.tgz#dd4b834b7734bc4c19142cf623b665f02e2d38b9"

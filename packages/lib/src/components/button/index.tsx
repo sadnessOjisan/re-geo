@@ -25,6 +25,7 @@ type Props = {
   isDisable?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   __unsafe__style?: React.CSSProperties;
+  __unsafe__className?: string;
 };
 
 const DEFAULT_DISABLE = false;
@@ -36,6 +37,7 @@ export const Button: FC<Props> = ({
   isDisable,
   onClick,
   __unsafe__style,
+  __unsafe__className,
 }) => {
   let skinStyle: React.CSSProperties = {};
   switch (type) {
@@ -120,6 +122,7 @@ export const Button: FC<Props> = ({
         cursor: "pointer",
       }}
       onClick={onClick}
+      className={__unsafe__className}
     >
       {children}
     </button>
