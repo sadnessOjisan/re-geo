@@ -23,6 +23,7 @@ type Props = {
     | "inverse";
   size?: "normal" | "large" | "small";
   isDisable?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   __unsafe__style?: React.CSSProperties;
 };
 
@@ -33,6 +34,7 @@ export const Button: FC<Props> = ({
   type,
   size,
   isDisable,
+  onClick,
   __unsafe__style,
 }) => {
   let skinStyle: React.CSSProperties = {};
@@ -115,7 +117,9 @@ export const Button: FC<Props> = ({
         ...sizeStyle,
         ...__unsafe__style,
         border: "6px ridge #bbb",
+        cursor: "pointer",
       }}
+      onClick={onClick}
     >
       {children}
     </button>
