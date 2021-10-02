@@ -1,22 +1,8 @@
-import { css, keyframes } from "@stitches/react";
 import { FC } from "react";
 
 type Props = {
   duration: number;
 };
-
-const Style = (
-  <style>
-    {`@keyframes toLeft {
-0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}`}
-  </style>
-);
 
 export const ModernMarquee: FC<Props> = (props) => {
   return (
@@ -27,7 +13,16 @@ export const ModernMarquee: FC<Props> = (props) => {
         position: "relative",
       }}
     >
-      {Style}
+      <style>
+        {`@keyframes toLeft {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }`}
+      </style>
       <div
         style={{
           transform: "translateX(100%)",

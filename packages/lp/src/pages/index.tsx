@@ -5,13 +5,14 @@ import {
   Rotator,
   Text,
   Zoom,
-} from "re-geo";
-import * as React from "react";
+} from "re-geo/src";
+import React, { VFC } from "react";
 
-const IndexPage: React.VFC = () => {
+const IndexPage: VFC = () => {
   return (
     <div>
-      <Background pattern="microfab">
+      afwef
+      {/* <Background pattern="microfab">
         <Headline level={1}>re-geo</Headline>
         <Text>npm i re-geo</Text>
         <section>
@@ -33,7 +34,7 @@ const IndexPage: React.VFC = () => {
             </Rotator>
           </ClassicMarquee>
         </section>
-      </Background>
+      </Background> */}
     </div>
   );
 };
