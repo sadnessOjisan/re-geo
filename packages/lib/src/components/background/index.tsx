@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Flames,Microfab, Rainbow, Stars } from "../../assets";
+import { Flames, Microfab, Rainbow, Stars } from "../../assets";
 import { assertNever } from "../../util/internal/assert-never";
 
 type Props = {
