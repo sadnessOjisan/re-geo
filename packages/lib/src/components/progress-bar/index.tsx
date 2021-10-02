@@ -13,7 +13,7 @@ export const ProgressBar: VFC<Props> = (props) => {
     <div
       className={props.__unsafe__className}
       style={{
-        background: `#c0c0c0 url(${Progress}) top left repeat-x !important`,
+        background: `#c0c0c0 url(${Progress}) top left repeat-x`,
         border: `1px solid #fff`,
         borderTop: `1px solid #808080`,
         borderLeft: `1px solid #808080`,
