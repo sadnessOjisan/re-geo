@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "storybook",
-      "public": "packages/lp/static",
+      "public": "packages/lib/storybook-static",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
