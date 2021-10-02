@@ -21,11 +21,11 @@ jobs:
       - name: can npm publish
         run: yarn run can-npm-publish
         working-directory: ./packages/lib
-      - name: typecheck
-        run: yarn run typecheck
       - name: lint
         run: yarn run lint:ci
       - name: format
         run: yarn run format:ci
       - name: build
         run: yarn run lib build
+      - name: typecheck
+        run: yarn run typecheck

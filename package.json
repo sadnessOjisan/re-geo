@@ -1,5 +1,5 @@
 {
-  "name": "re-geo",
+  "name": "re-geo-packages",
   "private": true,
   "workspaces": [
     "packages/**"

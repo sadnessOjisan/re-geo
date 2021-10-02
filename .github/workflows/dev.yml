@@ -22,11 +22,11 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: install
         run: yarn install
-      - name: typecheck
-        run: yarn run typecheck
       - name: lint
         run: yarn run lint:ci
       - name: format
         run: yarn run format:ci
       - name: build
         run: yarn run lib build
+      - name: typecheck
+        run: yarn run typecheck
