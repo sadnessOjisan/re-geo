@@ -32,3 +32,25 @@ ThreeCorlor.args = {
     fontSize: 80,
   },
 };
+
+export const Animation = Template.bind({});
+Animation.args = {
+  colors: [
+    {
+      color: "green",
+      point: "33%",
+    },
+    {
+      color: "#0ff",
+      point: "66%",
+    },
+    {
+      color: "#f00",
+      point: "100%",
+    },
+  ],
+  isAnimation: true,
+  __unsafe__style: {
+    fontSize: 80,
+  },
+};
