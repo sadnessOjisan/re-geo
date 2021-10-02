@@ -26,6 +26,9 @@ const styles = {
     top: 0;
     left: 0;
   `,
+  title: css`
+    font-size: 80px;
+  `,
   shell: css`
     width: 100;
     height: 40;
@@ -53,7 +56,9 @@ const IndexPage: VFC = () => {
         </div>
         <section className={cx(styles.sectionCommon, styles.firstViewSection)}>
           <Center isHorizontal isVertical>
-            <Headline level={1}>re-geo</Headline>
+            <Headline level={1} __unsafe__className={styles.title}>
+              re-geo
+            </Headline>
           </Center>
           <Center isHorizontal isVertical>
             <div className={styles.shell}>
