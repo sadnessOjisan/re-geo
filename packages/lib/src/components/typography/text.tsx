@@ -5,6 +5,7 @@ import { BLACK } from "../../const/internal/color";
 
 type Props = {
   color?: string;
+  __unsafe__style?: React.CSSProperties;
 };
 
 const baseStyle: React.CSSProperties = {
@@ -13,9 +14,16 @@ const baseStyle: React.CSSProperties = {
 
 const FONT_SIZE = 16;
 
-export const Text: FC<Props> = ({ children, color }) => {
+export const Text: FC<Props> = ({ __unsafe__style, children, color }) => {
   return (
-    <p style={{ ...baseStyle, fontSize: FONT_SIZE, color: color ?? BLACK }}>
+    <p
+      style={{
+        ...baseStyle,
+        fontSize: FONT_SIZE,
+        color: color ?? BLACK,
+        ...__unsafe__style,
+      }}
+    >
       {children}
     </p>
   );
