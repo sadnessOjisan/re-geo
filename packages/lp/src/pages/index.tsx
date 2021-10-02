@@ -11,6 +11,7 @@ import {
   Text,
   Zoom,
 } from "re-geo";
+import { WHITE } from "re-geo/src/const/internal/color";
 import React, { VFC } from "react";
 
 import { NPM_URL, STORYBOOK_URL } from "../const/url";
@@ -26,14 +27,23 @@ const styles = {
     top: 0;
     left: 0;
   `,
+  headerContainer: css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    & > * {
+      color: ${WHITE};
+      margin: 0px 16px;
+    }
+  `,
   title: css`
-    font-size: 80px;
+    font-size: 80px !important;
     margin-bottom: 32px;
   `,
   shell: css`
-    width: 100;
-    height: 40;
     background: white;
+    padding: 16px 32px;
   `,
   sectionCommon: css`
     margin: 32px 0px;
@@ -53,11 +63,24 @@ const IndexPage: VFC = () => {
       <Background pattern="microfab">
         <div className={styles.header}>
           <Background pattern="flame">
-            <a>npm</a>
+            <div className={styles.headerContainer}>
+              <div>
+                <p>re-geo</p>
+              </div>
+              <div>
+                <a>npm</a>
+                <a>GitHub</a>
+                <a>About author</a>
+              </div>
+            </div>
           </Background>
         </div>
         <section className={cx(styles.sectionCommon, styles.firstViewSection)}>
-          <Center isHorizontal isVertical>
+          <Center
+            isHorizontal
+            isVertical
+            __unsafe__style={{ flexDirection: "column" }}
+          >
             <Headline level={1} __unsafe__className={styles.title}>
               <GradationText
                 colors={[
@@ -83,10 +106,13 @@ const IndexPage: VFC = () => {
                 re-geo
               </GradationText>
             </Headline>
+            <Headline level={2}>
+              react based geo-cities style component
+            </Headline>
           </Center>
           <Center isHorizontal isVertical>
             <div className={styles.shell}>
-              <Text>npm i re-geo</Text>
+              <Text>npm install re-geo</Text>
             </div>
           </Center>
         </section>
