@@ -28,14 +28,14 @@ jobs:
         run: yarn run lib build
       - name: typecheck
         run: yarn run typecheck
+      - name: release
+        run: npm publish
+        working-directory: ./packages/lib
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_RE_GEO }}"
           channelId: live
           projectId: re-geo
-      - name: release
-        run: npm publish
-        working-directory: ./packages/lib
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
