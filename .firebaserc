@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "re-geo"
+  },
+  "targets": {
+    "re-geo": {
+      "hosting": {
+        "storybook": [
+          "re-geo-storybook"
+        ],
+        "lp": [
+          "re-geo-lp"
+        ]
+      }
+    }
+  }
+}
