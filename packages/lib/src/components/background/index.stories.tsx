@@ -29,6 +29,11 @@ Rainbow.args = {
   pattern: "rainbow",
 };
 
+export const Flame = Template.bind({});
+Flame.args = {
+  pattern: "flame",
+};
+
 export const IncludeChildComponent = Template.bind({});
 IncludeChildComponent.args = {
   pattern: "rainbow",

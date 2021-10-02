@@ -1,6 +1,5 @@
 import { FC } from "react";
 
-import { OLD_FASHION } from "../../const";
 import {
   BLUE,
   CYAN,
@@ -9,6 +8,7 @@ import {
   YELLOW,
   YELLOW_DARK,
 } from "../../const/internal/color";
+import { OLD_FASHION } from "../../const/internal/font";
 import { assertNever } from "../../util/internal/assert-never";
 
 type Props = {
