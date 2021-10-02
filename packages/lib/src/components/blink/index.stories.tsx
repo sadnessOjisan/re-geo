@@ -16,3 +16,15 @@ export const Default = Template.bind({});
 Default.args = {
   children: "hello world",
 };
+
+export const SLOW = Template.bind({});
+SLOW.args = {
+  children: "hello world",
+  speed: 3,
+};
+
+export const HIGH = Template.bind({});
+HIGH.args = {
+  children: "hello world",
+  speed: 0.15,
+};
