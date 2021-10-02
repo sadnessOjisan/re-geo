@@ -1,4 +1,3 @@
-import { Blink } from "re-geo";
 import {
   Background,
   ClassicMarquee,
@@ -6,10 +5,10 @@ import {
   Rotator,
   Text,
   Zoom,
-} from "re-geo/src";
-import React, { VFC } from "react";
+} from "re-geo";
+import * as React from "react";
 
-const IndexPage: VFC = () => {
+const IndexPage: React.VFC = () => {
   return (
     <div>
       <Background pattern="microfab">
