@@ -20,9 +20,7 @@ export const GradationText: FC<Props> = (props) => {
         ...props.__unsafe__style,
       }}
     >
-      {gradation}
-      <br />
-      linear-gradient( 90deg,#2e4f8b 0%,#3e589d 35%,#8f619b 60%,#d0718f 70%)
+      {props.children}
     </p>
   );
 };
