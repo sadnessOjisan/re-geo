@@ -14,5 +14,18 @@ const Template: Story<ComponentProps<typeof Component>> = (args) => (
 
 export const ThreeCorlor = Template.bind({});
 ThreeCorlor.args = {
-  colors: ["#ff0 0%", "#0ff 35%", "#f00 70%"],
+  colors: [
+    {
+      color: "#ff0",
+      point: "0%",
+    },
+    {
+      color: "#0ff",
+      point: "35%",
+    },
+    {
+      color: "#f00",
+      point: "70%",
+    },
+  ],
 };

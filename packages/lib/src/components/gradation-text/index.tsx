@@ -2,10 +2,18 @@ import { FC } from "react";
 
 import { BaseComponentType } from "../../util/internal/base-component-type";
 
-type Props = { inline?: boolean; colors: string[] } & BaseComponentType;
+type Gradation = {
+  color: string;
+  point: `${string}%`;
+};
+
+type Props = { inline?: boolean; colors: Gradation[] } & BaseComponentType;
 export const GradationText: FC<Props> = (props) => {
+  const gradations = props.colors.map(
+    (color) => `${color.color} ${color.point}`
+  );
   const gradation = `linear-gradient(
-        90deg,${props.colors.join(",")}
+        90deg,${gradations.join(",")}
       )`;
 
   return (
