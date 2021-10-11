@@ -1,10 +1,14 @@
 import { css, cx } from "linaria";
 import {
   Background,
+  Blink,
   Button,
   Center,
   ClassicMarquee,
+  Computer01,
   Construction,
+  Counter2,
+  Emailme,
   GradationText,
   Headline,
   IELogo,
@@ -39,6 +43,12 @@ const styles = {
       margin: 0px 16px;
     }
   `,
+  headerItems: css`
+    display: flex;
+    & > * {
+      margin-left: 8px;
+    }
+  `,
   title: css`
     font-size: 80px !important;
     margin-bottom: 32px;
@@ -64,6 +74,10 @@ const styles = {
   animationItem: css`
     margin: 16px 0px;
   `,
+  stackContainer: css`
+    display: flex;
+    justify-content: space-between;
+  `,
   leftStack: css`
     display: flex;
     flex-direction: column;
@@ -80,17 +94,19 @@ const IndexPage: VFC = () => {
           <Background pattern="flame">
             <div className={styles.headerContainer}>
               <div>
-                <Text>re-geo</Text>
+                <Text color="white" __unsafe__style={{ fontSize: 24 }}>
+                  re-geo
+                </Text>
               </div>
-              <div>
+              <div className={styles.headerItems}>
                 <a href={NPM_URL}>
-                  <Text>npm</Text>
+                  <Text color="white">npm</Text>
                 </a>
                 <a href={GITHUB_URL}>
-                  <Text>GitHub</Text>
+                  <Text color="white">GitHub</Text>
                 </a>
                 <a href={AUTHOR_URL}>
-                  <Text>Author</Text>
+                  <Text color="white">Author</Text>
                 </a>
               </div>
             </div>
@@ -105,9 +121,16 @@ const IndexPage: VFC = () => {
                 We dont support IE
               </Text>
             </ClassicMarquee>
-            <div className={styles.leftStack}>
-              <img src={IELogo}></img>
-              <img src={NSLogo}></img>
+            <div className={styles.stackContainer}>
+              <div className={styles.leftStack}>
+                <img src={IELogo}></img>
+                <img src={NSLogo}></img>
+              </div>
+              <div className={styles.leftStack}>
+                <img src={Computer01}></img>
+                <img src={Counter2}></img>
+                <img src={Emailme}></img>
+              </div>
             </div>
             <Center
               isHorizontal
@@ -151,48 +174,65 @@ const IndexPage: VFC = () => {
           </section>
 
           <section className={cx(styles.sectionCommon)}>
-            <Headline level={2}>Component catalog</Headline>
-            <div className={styles.animationItem}>
-              <ClassicMarquee>
-                <a href={STORYBOOK_URL}>
-                  <Text color="white">storybook</Text>
-                </a>
-              </ClassicMarquee>
-            </div>
-            <Center isVertical isHorizontal>
+            <Background pattern="stars">
+              <Headline level={2}>Component catalog</Headline>
               <div className={styles.animationItem}>
-                <Rotator>
-                  <a href={NPM_URL}>
-                    <Text color="white">npm</Text>
+                <ClassicMarquee>
+                  <a href={STORYBOOK_URL}>
+                    <Text color="white">storybook</Text>
                   </a>
-                </Rotator>
+                </ClassicMarquee>
               </div>
-            </Center>
-            <div className={styles.animationItem}>
-              <Zoom>
-                <a href={STORYBOOK_URL}>
-                  <Text color="white">storybook</Text>
-                </a>
-              </Zoom>
-            </div>
-
-            <div>
-              <ClassicMarquee height="300px" vspace="80px">
-                <Rotator>
-                  <Zoom>
-                    <a href={STORYBOOK_URL}>
-                      <Text color="white">storybook</Text>
+              <Center isVertical isHorizontal>
+                <div className={styles.animationItem}>
+                  <Rotator>
+                    <a href={NPM_URL}>
+                      <Text color="white">npm</Text>
                     </a>
-                  </Zoom>
-                </Rotator>
-              </ClassicMarquee>
-            </div>
-            <a href={STORYBOOK_URL}>
-              <Button>storybook</Button>
-            </a>
-            <a href={STORYBOOK_URL}>
-              <Button type="primary">storybook</Button>
-            </a>
+                  </Rotator>
+                </div>
+              </Center>
+
+              <div>
+                <ClassicMarquee
+                  height="300px"
+                  vspace="80px"
+                  __unsafe__style={{ paddingTop: 80 }}
+                >
+                  <Rotator>
+                    <Zoom>
+                      <a href={STORYBOOK_URL}>
+                        <Text color="white">storybook</Text>
+                      </a>
+                    </Zoom>
+                  </Rotator>
+                </ClassicMarquee>
+              </div>
+              <div>
+                <ClassicMarquee
+                  height="300px"
+                  vspace="80px"
+                  __unsafe__style={{ paddingTop: 80 }}
+                  direction="right"
+                >
+                  <Blink speed={0.1}>
+                    <Rotator>
+                      <Zoom>
+                        <a href={STORYBOOK_URL}>
+                          <Text color="white">storybook</Text>
+                        </a>
+                      </Zoom>
+                    </Rotator>
+                  </Blink>
+                </ClassicMarquee>
+              </div>
+              <a href={STORYBOOK_URL}>
+                <Button>storybook</Button>
+              </a>
+              <a href={STORYBOOK_URL}>
+                <Button type="primary">storybook</Button>
+              </a>
+            </Background>
           </section>
           <section className={cx(styles.sectionCommon)}>
             <Headline level={1}>sponsor</Headline>
