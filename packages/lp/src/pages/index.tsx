@@ -43,6 +43,12 @@ const styles = {
       margin: 0px 16px;
     }
   `,
+  headerItems: css`
+    display: flex;
+    & > * {
+      margin-left: 8px;
+    }
+  `,
   title: css`
     font-size: 80px !important;
     margin-bottom: 32px;
@@ -88,17 +94,19 @@ const IndexPage: VFC = () => {
           <Background pattern="flame">
             <div className={styles.headerContainer}>
               <div>
-                <Text>re-geo</Text>
+                <Text color="white" __unsafe__style={{ fontSize: 24 }}>
+                  re-geo
+                </Text>
               </div>
-              <div>
+              <div className={styles.headerItems}>
                 <a href={NPM_URL}>
-                  <Text>npm</Text>
+                  <Text color="white">npm</Text>
                 </a>
                 <a href={GITHUB_URL}>
-                  <Text>GitHub</Text>
+                  <Text color="white">GitHub</Text>
                 </a>
                 <a href={AUTHOR_URL}>
-                  <Text>Author</Text>
+                  <Text color="white">Author</Text>
                 </a>
               </div>
             </div>
